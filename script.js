@@ -544,11 +544,13 @@ function loadSoal() {
     bankSoal[unit].forEach(s => {
         const key = `${s.tipe}|${s.uk}|${s.soal}`;
         container.innerHTML += `
-        <div class="soal" data-key="${key}">
-            <p>${s.text}</p>
-            <button class="btn-ya" onclick="jawab(this, 1)">YA</button>
-            <button class="btn-tidak" onclick="jawab(this, 0)">TIDAK</button>
-            <button class="btn-tdk-uji" onclick="jawab(this, -1)">TIDAK DIUJI</button>
+                <div class="soal" data-key="${key}">
+            <p style="margin-bottom: 8px; font-weight: 500;">${s.text}</p>
+            <div class="button-group">
+                <button type="button" class="btn-ya" onclick="jawab(this, 1)">YA</button>
+                <button type="button" class="btn-tidak" onclick="jawab(this, 0)">TIDAK</button>
+                <button type="button" class="btn-tdk-uji" onclick="jawab(this, -1)">TIDAK DIUJI</button>
+            </div>
             <div class="followup"></div>
         </div>`;
     });
