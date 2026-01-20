@@ -574,21 +574,28 @@ function jawab(btn, nilai) {
     const follow = div.querySelector(".followup");
     const key = div.dataset.key;
 
-    // Inisialisasi object jika belum ada
+    // 1. Simpan Jawaban
     jawaban[key] = { nilai: nilai };
 
-    // Reset warna tombol utama
-    div.querySelectorAll(":scope > button").forEach(b => b.classList.remove("active"));
+    // 2. RESET WARNA (Hanya tombol YA/TIDAK/TDK DIUJI di baris atas)
+    // Kita cari button yang ada di dalam .button-group saja
+    const groupUtama = div.querySelector(".button-group");
+    groupUtama.querySelectorAll("button").forEach(b => b.classList.remove("active"));
+    
+    // 3. AKTIFKAN TOMBOL YANG DIKLIK
     btn.classList.add("active");
 
+    // 4. LOGIK FOLLOW UP (OFR / ALASAN)
     follow.innerHTML = "";
 
     if (nilai === 0) {
         follow.innerHTML = `
             <div style="margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;">
                 <p style="font-size:14px; margin-bottom:5px;"><b>OFR (On-Field Refreshment):</b></p>
-                <button type="button" class="btn-ofr-ya" onclick="jawabOFR(this, '${key}', 1)">YA</button>
-                <button type="button" class="btn-ofr-tidak" onclick="jawabOFR(this, '${key}', 0)">TIDAK</button>
+                <div class="button-group-ofr">
+                    <button type="button" class="btn-ofr-ya" onclick="jawabOFR(this, '${key}', 1)">YA</button>
+                    <button type="button" class="btn-ofr-tidak" onclick="jawabOFR(this, '${key}', 0)">TIDAK</button>
+                </div>
             </div>
         `;
     } else if (nilai === -1) {
