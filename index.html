@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>EKO Form</title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+
+<div class="container">
+
+<h2>EKO ONLINE</h2>
+
+<div class="input-group">
+    <input type="number" id="nrp" placeholder="NRP Operator" oninput="cariNama()">
+</div>
+
+<div class="input-group">
+    <input type="text" id="nama" placeholder="Nama akan muncul otomatis..." readonly>
+</div>
+
+<select id="unit" onchange="loadSoal()">
+  <option value="">Pilih Unit</option>
+
+  <option disabled>── HAULER ──</option>
+  <option value="DTS">Small Hauler</option>
+  <option value="DTM">Medium Hauler</option>
+
+  <option disabled>── EXCAVATOR ──</option>
+  <option value="EXCOB">Excavator OB</option>
+  <option value="EXCOAL">Excavator COAL</option>
+  <option value="EXCSUP">Excavator Support</option>
+
+  <option disabled>── DOZER ──</option>
+  <option value="DZS">Dozer Small</option>
+  <option value="DZM">Dozer Medium</option>
+
+  <option disabled>── UNIT SUPPORT ──</option>
+  <option value="WT">Water Truck</option>
+  <option value="LTFT">Lube Truck / Fuel Truck</option>
+  <option value="CT">Crane Truck</option>
+  <option value="Grader">Motor Grader</option>
+  <option value="Compact">Compact</option>
+
+</select>
+
+<input id="No_Unit" placeholder="Nomor Unit (Diawali kode HDT/HEX/HDZ)">
+
+<select id="Evaluator">
+  <option value="">Pilih Evaluator</option>
+  <option disabled>── Instruktur Track ──</option>
+  <option>Kusnadi</option>
+  <option>Abdul Wahab</option>
+  <option>Padri</option>
+  <option>Agung Irawan</option>
+  <option>Seto Hariyono</option>
+  <option>Khoirin Nafarin</option>
+
+  <option disabled>── Instruktur Wheel ──</option>
+  <option>Rejo Susanto</option>
+  <option>Sugeng Wahyudi</option>
+  <option>Edy Suwoyo</option>
+  <option>Edi Mulyono</option>
+  <option>Ahmad Rosdi</option>
+  <option>Wahidinnor Zahrani</option>
+  <option>Ahyat Firdaus</option>
+</select>
+
+<input type="date" id="Tanggal_evaluasi">
+
+
+<div id="soalContainer"></div>
+
+<div id="modalOverlay" class="modal-overlay">
+    <div id="summaryBox" class="summary-box" style="display: none;">
+        <h3>RINGKASAN EVALUASI</h3>
+        <hr>
+        <div class="summary-item" style="font-weight: 800;"><span>Total Soal:</span> <b id="sumTotal">0</b></div>
+        <div class="summary-item"><span>Jawaban YA:</span> <b id="sumYa" style="color: green;">0</b></div>
+        <div class="summary-item"><span>Jawaban TIDAK:</span> <b id="sumTidak" style="color: red;">0</b></div>
+        <div class="summary-item"><span>TIDAK DIUJI:</span> <b id="sumTdkUji" style="color: orange;">0</b></div>
+        
+        <div class="summary-item" style="background: #f8f9fa; border-radius: 8px; margin-top: 10px; padding: 15px; border: 1px solid #ddd;">
+            <span><b>NILAI AKHIR:</b></span> 
+            <b id="sumNilai" style="font-size: 20px; color: #007bff;">0</b>
+        </div>
+        
+        <div class="btn-group-modal">
+            <button class="btn-modal-kembali" onclick="closeSummary()">KEMBALI</button>
+            <button id="btnKirimFinal" class="btn-modal-kirim" onclick="kirimFinal()">KIRIM DATA</button>
+        </div>
+    </div>
+</div>
+
+<button class="submit" onclick="submitForm()">SUBMIT</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

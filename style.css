@@ -1,0 +1,225 @@
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  background:#f4f6f8;
+  font-family:Segoe UI, Arial;
+}
+
+.container{
+  max-width:600px;
+  margin:auto;
+  padding:12px;
+}
+
+h2{
+  text-align:center;
+  margin-bottom:15px;
+  font-size:20px;
+}
+
+input, select{
+  width:100%;
+  padding:14px;
+  margin-bottom:10px;
+  font-size:16px;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+
+option:disabled{
+  font-weight:bold;
+  color:#777;
+  background:#f0f0f0;
+}
+
+.soal{
+  background:white;
+  padding:14px;
+  border-radius:12px;
+  margin-bottom:12px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.08);
+}
+
+.soal p{
+  font-size:16px;
+  margin-bottom:10px;
+}
+
+.soal button{
+  width:32%;
+  padding:12px 0;
+  font-size:14px;
+  border:none;
+  border-radius:8px;
+  background:#e0e0e0;
+  margin-right:2px;
+}
+
+.soal button:last-child{
+  margin-right:0;
+}
+
+/* ACTIVE COLOR */
+.soal button.btn-ya.active{
+  background:#4CAF50;
+  color:white;
+}
+
+.soal button.btn-tidak.active{
+  background:#F44336;
+  color:white;
+}
+
+.soal button.btn-tdk-uji.active{
+  background:#9E9E9E;
+  color:white;
+}
+
+
+.submit{
+  width:100%;
+  padding:16px;
+  font-size:18px;
+  background:#2196F3;
+  color:white;
+  border:none;
+  border-radius:12px;
+  margin-top:15px;
+}
+
+.followup{
+  margin-top:10px;
+}
+
+.followup button{
+  width:48%;
+  margin-right:2%;
+}
+
+.followup button:last-child{
+  margin-right:0;
+}
+
+.followup input{
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+.followup p {
+    font-size: 14px;
+    margin: 8px 0 5px 0;
+    color: #555;
+}
+
+/* Warna untuk tombol OFR saat dipilih (Oranye) */
+.btn-ofr.active {
+    background: #FF9800 !important;
+    color: white !important;
+}
+
+/* Style dasar tombol OFR agar rapi */
+.btn-ofr {
+    width: 48%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 8px;
+    background: #e0e0e0;
+    cursor: pointer;
+}
+
+/* Pastikan tombol Ya di dalam OFR jadi hijau saat aktif */
+.btn-ofr-ya.active {
+    background: #4CAF50 !important;
+    color: white;
+}
+
+/* Pastikan tombol Tidak di dalam OFR jadi merah saat aktif */
+.btn-ofr-tidak.active {
+    background: #f61202 !important;
+    color: white;
+}
+
+/* Style dasar untuk tombol pilihan di bawah OFR */
+.btn-ofr-ya, .btn-ofr-tidak {
+    width: 48%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 8px;
+    background: #e0e0e0;
+    cursor: pointer;
+}
+
+/* Latar belakang gelap (Overlay) */
+.modal-overlay {
+    display: none; /* Sembunyikan secara default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Efek gelap */
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Efek blur pada form di belakangnya */
+}
+
+/* Kotak Putih Pop-up */
+.summary-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    z-index: 1001;
+    text-align: center;
+}
+
+.summary-box h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.btn-group-modal {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-modal-kirim {
+    flex: 2;
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-modal-kembali {
+    flex: 1;
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
