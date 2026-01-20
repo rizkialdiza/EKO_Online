@@ -223,3 +223,34 @@ option:disabled{
     border-radius: 8px;
     cursor: pointer;
 }
+
+/* Container pembungkus tombol agar ukurannya terkontrol */
+.button-group {
+    display: flex;
+    gap: 8px;
+    justify-content: center; /* Tombol akan berkumpul di tengah */
+    max-width: 350px;       /* Batas lebar maksimal grup tombol */
+    margin: 10px 0;         /* Jarak atas bawah */
+}
+
+.button-group button {
+    flex: 1;                /* Tombol membagi ruang secara adil */
+    min-width: 80px;        /* Lebar minimal supaya teks tidak terjepit */
+    max-width: 110px;       /* Lebar maksimal supaya tidak terlalu lebar di layar besar */
+    padding: 8px 5px;
+    font-size: 11px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #f8f9fa;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+/* Responsif khusus HP kecil */
+@media (max-width: 360px) {
+    .button-group button {
+        font-size: 10px;    /* Perkecil font sedikit lagi jika HP sangat sempit */
+        min-width: 70px;
+    }
+}
