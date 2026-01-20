@@ -254,3 +254,23 @@ option:disabled{
         min-width: 70px;
     }
 }
+
+/* Styling khusus grup tombol OFR agar berbeda dengan tombol utama */
+.button-group-ofr {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.button-group-ofr button {
+    flex: 0 1 100px; /* Tombol tidak dipaksa lebar, max 100px */
+    padding: 6px;
+    font-size: 11px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: white;
+}
+
+/* Warna saat OFR dipilih */
+.btn-ofr-ya.active { background-color: #28a745; color: white; }
+.btn-ofr-tidak.active { background-color: #dc3545; color: white; }
