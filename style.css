@@ -48,14 +48,30 @@ option:disabled{
   margin-bottom:10px;
 }
 
-.soal button{
-  width:32%;
-  padding:12px 0;
-  font-size:14px;
-  border:none;
-  border-radius:8px;
-  background:#e0e0e0;
-  margin-right:2px;
+.soal button {
+    width: 32%;
+    padding: 12px 0;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #e0e0e0;
+    margin-right: 2px;
+    cursor: pointer;
+    /* --- Tambahkan ini --- */
+    transition: all 0.3s ease; 
+    outline: none;
+}
+
+/* Tambahkan efek hover (khusus untuk tampilan Desktop/Laptop) */
+@media ( some-hover: hover ) {
+    .soal button:hover {
+        background: #d4d4d4;
+    }
+}
+
+/* Tambahkan sedikit efek tekan saat diklik */
+.soal button:active {
+    transform: scale(0.95);
 }
 
 .soal button:last-child{
@@ -156,33 +172,47 @@ option:disabled{
     cursor: pointer;
 }
 
-/* Latar belakang gelap (Overlay) */
 .modal-overlay {
-    display: none; /* Sembunyikan secara default */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Efek gelap */
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1000;
-    backdrop-filter: blur(5px); /* Efek blur pada form di belakangnya */
+    backdrop-filter: blur(5px);
+    /* --- Tambahkan ini --- */
+    animation: fadeIn 0.3s ease-out;
 }
 
-/* Kotak Putih Pop-up */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 .summary-box {
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    background: white;
+    background: white; /* INI KUNCI AGAR KOTAK TETAP PUTIH */
     padding: 25px;
     border-radius: 15px;
     width: 90%;
     max-width: 400px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     z-index: 1001;
-    text-align: center;
+}
+
+#signature-pad {
+    display: block;
+    width: 100%;
+    height: 150px;
+}
+
+@keyframes slideUp {
+    from { transform: translate(-50%, -40%); opacity: 0; }
+    to { transform: translate(-50%, -50%); opacity: 1; }
 }
 
 .summary-box h3 {
