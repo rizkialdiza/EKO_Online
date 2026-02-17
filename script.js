@@ -548,6 +548,8 @@ const bankSoal = {
     {tipe:"DTM", uk:"UK2", soal:6, text:"2.6 Apakah Operator menggunakan radio komunikasi dengan baik dan benar?"},
     {tipe:"DTM", uk:"UK2", soal:7, text:"2.7 Apakah Operator memahami target ritase tiap jam pada fleet tsb?"},
     {tipe:"DTM", uk:"UK2", soal:8, text:"2.8 Apakah Operator memahami jumlah passing untuk unit yang dioperasikan?"},
+    {tipe:"DTM", uk:"UK2", soal:7, text:"2.9 Apakah Operator memahami jumlah passing untuk unit yang dioperasikan?"},
+    {tipe:"DTM", uk:"UK2", soal:8, text:"2.10 Apakah Operator menyampaikan ke Operator Loader saat muatan kurang?"},
 
     //UK3
     {tipe:"DTM", uk:"UK3", soal:1, text:"3.1 Apakah Operator mengetahui dimensi unit?"},
@@ -583,29 +585,31 @@ const bankSoal = {
     //UK6
     {tipe:"DTM", uk:"UK6", soal:1, text:"6.1 Apakah Operator melakukan manuver sebelum loading searah jarum jam?"},
     {tipe:"DTM", uk:"UK6", soal:2, text:"6.2 Apakah Operator menempatkan lever transimis pada posisi P saat loading?"},
-    {tipe:"DTM", uk:"UK6", soal:3, text:"6.3 Apakah Operator tepat menggunakan transmisi saat awal bergerak maju setelah loading?"},
-    {tipe:"DTM", uk:"UK6", soal:4, text:"6.4 Apakah Operator menggunakan transmisi dan speed sesuai dengan kondisi jalan?"},
-    {tipe:"DTM", uk:"UK6", soal:5, text:"6.5 Apakah Operator menggunakan Shift Limit & Power Economy Mode sesuai dengan kondisi jalan?"},
-    {tipe:"DTM", uk:"UK6", soal:6, text:"6.6 Apakah Operator menggunakan brake sesuai dengan kondisi jalan?"},
-    {tipe:"DTM", uk:"UK6", soal:7, text:"6.7 Apakah Operator menjaga jarak beriringan dengan unit lain ≥ 40 m?"},
-    {tipe:"DTM", uk:"UK6", soal:8, text:"6.8 Apakah Operator mengambil haluan saat belok atau di tikungan dengan tepat?"},
-    {tipe:"DTM", uk:"UK6", soal:9, text:"6.9 Apakah Operator terampil dalam mengemudi atau pengendalian steering wheel?"},
-    {tipe:"DTM", uk:"UK6", soal:10, text:"6.10 Apakah Operator TIDAK melakukan neutral coasitng?"},
-    {tipe:"DTM", uk:"UK6", soal:11, text:"6.11 Apakah Operator TIDAK melakukan abuse shifting?"},
-    {tipe:"DTM", uk:"UK6", soal:12, text:"6.12 Apakah Operator TIDAK tidak melakukan hunting?"},
-    {tipe:"DTM", uk:"UK6", soal:13, text:"6.13 Apakah Operator TIDAK melakukan gear select harmfull?"},
-    {tipe:"DTM", uk:"UK6", soal:14, text:"6.14 Apakah Operator TIDAK melakukan overrunning?"},
-    {tipe:"DTM", uk:"UK6", soal:15, text:"6.15Apakah Operator TIDAK melakukan melakukan manuver dengan gerakan patah (end stroke steering)?"},
-    {tipe:"DTM", uk:"UK6", soal:16, text:"6.16 Apakah Operator melakukan manuver searah jarum jam sebelum dumping?"},
-    {tipe:"DTM", uk:"UK6", soal:17, text:"6.17 Apakah Operator mengikuti arahan GL Disposal atau dump man untuk titik dumping?"},
-    {tipe:"DTM", uk:"UK6", soal:18, text:"6.18 Apakah Operator menjaga jarak dumping dengan unit lain?"},
-    {tipe:"DTM", uk:"UK6", soal:19, text:"6.19 Apakah Operator menggunakan parkirng brake saat dumping?"},
-    {tipe:"DTM", uk:"UK6", soal:20, text:"6.20 Apakah Operator menggunakan rpm dumping yang tepat?"},
-    {tipe:"DTM", uk:"UK6", soal:21, text:"6.21 Apakah Operator menurunkan vessel dengan metode yang tepat?"},
-    {tipe:"DTM", uk:"UK6", soal:22, text:"6.22 Apakah setelah dumping Operator menurunkan vessel terlebih dahulu kemudian mengoperasikan unit?"},
-    {tipe:"DTM", uk:"UK6", soal:23, text:"6.23 Apakah Operator parkir dalam posisi rata dan aman?"},
-    {tipe:"DTM", uk:"UK6", soal:24, text:"6.24 Apakah Operator menempatakan lever transmisi pada posisi P saat parkir?"},
-    {tipe:"DTM", uk:"UK6", soal:25, text:"6.25 Apakah Operator melakukan idle sebelum shut down engine?"},
+    {tipe:"DTM", uk:"UK6", soal:3, text:"6.3 Apakah Operator memperhatikan payload meter saat loading?"},
+    {tipe:"DTM", uk:"UK6", soal:4, text:"6.4 Apakah Operator tepat menggunakan transmisi saat awal bergerak maju setelah loading?"},
+    {tipe:"DTM", uk:"UK6", soal:5, text:"6.5 Apakah Operator menggunakan transmisi dan speed sesuai dengan kondisi jalan?"},
+    {tipe:"DTM", uk:"UK6", soal:6, text:"6.6 Apakah Operator menggunakan Shift Limit & Power Economy Mode sesuai dengan kondisi jalan?"},
+    {tipe:"DTM", uk:"UK6", soal:7, text:"6.7 Apakah Operator menggunakan brake sesuai dengan kondisi jalan?"},
+    {tipe:"DTM", uk:"UK6", soal:8, text:"6.8 Apakah Operator menjaga jarak beriringan dengan unit lain ≥ 40 m?"},
+    {tipe:"DTM", uk:"UK6", soal:9, text:"6.9 Apakah Operator mengaktifkan switch ARC (OHT) / ARSC (HD 785)?"},
+    {tipe:"DTM", uk:"UK6", soal:10, text:"6.10 Apakah Operator mengambil haluan saat belok atau di tikungan dengan tepat?"},
+    {tipe:"DTM", uk:"UK6", soal:11, text:"6.11 Apakah Operator terampil dalam mengemudi atau pengendalian steering wheel?"},
+    {tipe:"DTM", uk:"UK6", soal:12, text:"6.12 Apakah Operator TIDAK melakukan neutral coasitng?"},
+    {tipe:"DTM", uk:"UK6", soal:13, text:"6.13 Apakah Operator TIDAK melakukan abuse shifting?"},
+    {tipe:"DTM", uk:"UK6", soal:14, text:"6.14 Apakah Operator TIDAK tidak melakukan hunting?"},
+    {tipe:"DTM", uk:"UK6", soal:15, text:"6.15 Apakah Operator TIDAK melakukan gear select harmfull?"},
+    {tipe:"DTM", uk:"UK6", soal:16, text:"6.16 Apakah Operator TIDAK melakukan overrunning?"},
+    {tipe:"DTM", uk:"UK6", soal:17, text:"6.17 Apakah Operator TIDAK melakukan melakukan manuver dengan gerakan patah (end stroke steering)?"},
+    {tipe:"DTM", uk:"UK6", soal:18, text:"6.18 Apakah Operator melakukan manuver searah jarum jam sebelum dumping?"},
+    {tipe:"DTM", uk:"UK6", soal:19, text:"6.19 Apakah Operator mengikuti arahan GL Disposal atau dump man untuk titik dumping?"},
+    {tipe:"DTM", uk:"UK6", soal:20, text:"6.20 Apakah Operator menjaga jarak dumping dengan unit lain?"},
+    {tipe:"DTM", uk:"UK6", soal:21, text:"6.21 Apakah Operator menggunakan parkirng brake saat dumping?"},
+    {tipe:"DTM", uk:"UK6", soal:22, text:"6.22 Apakah Operator menggunakan rpm dumping yang tepat?"},
+    {tipe:"DTM", uk:"UK6", soal:23, text:"6.23 Apakah Operator menurunkan vessel dengan metode yang tepat?"},
+    {tipe:"DTM", uk:"UK6", soal:24, text:"6.24 Apakah setelah dumping Operator menurunkan vessel terlebih dahulu kemudian mengoperasikan unit?"},
+    {tipe:"DTM", uk:"UK6", soal:25, text:"6.25 Apakah Operator parkir dalam posisi rata dan aman?"},
+    {tipe:"DTM", uk:"UK6", soal:26, text:"6.26 Apakah Operator menempatakan lever transmisi pada posisi P saat parkir?"},
+    {tipe:"DTM", uk:"UK6", soal:27, text:"6.27 Apakah Operator melakukan idle sebelum shut down engine?"},
 
   ],
 
@@ -616,7 +620,7 @@ const bankSoal = {
   ]
 };
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzj8MSQqojab3jc6pnCJy5TH0JLwEMsYtQzT_uwNHPKCClJ4LNRhwHOM0z_cJrREEwC/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxIvVSTo3yYVEFm_BxndcHdfOmHScYJLjq7oWbfnWYv8kqmmX0kJvM2Wu3dwm9hPLDt/exec';
 let jawaban = {};
 let isSigned = false; 
 let currentToken = ""; 
@@ -810,6 +814,7 @@ function cariDraft() {
             document.getElementById("No_Unit").value = d.no_unit || "";
             document.getElementById("Evaluator").value = d.evaluator || "";
             document.getElementById("Tanggal_evaluasi").value = d.tanggal || "";
+            document.getElementById("EGI").value = d.EGI || "";
 
             jawaban = {}; 
             if (d.hasil_jawaban) {
@@ -849,6 +854,7 @@ function simpanDraft(btnDraft) {
         no_unit: no_unit,
         evaluator: document.getElementById("Evaluator").value,
         tanggal: document.getElementById("Tanggal_evaluasi").value,
+        EGI: document.getElementById("EGI").value,
         hasil_jawaban: Object.keys(jawaban).map(key => ({
             soal_id: key,
             data: jawaban[key]
@@ -903,6 +909,7 @@ function kirimFinal() {
         no_unit: document.getElementById("No_Unit").value,
         evaluator: document.getElementById("Evaluator").value,
         tanggal: document.getElementById("Tanggal_evaluasi").value,
+        EGI: document.getElementById("EGI").value,
         nilai_akhir: nilaiHasil, // Sekarang nilaiHasil sudah aman karena sudah dihitung di atas
         hasil_jawaban: Object.keys(jawaban).map(key => ({ 
             soal_id: key, 
@@ -914,21 +921,23 @@ function kirimFinal() {
     btn.innerText = "MENGIRIM...";
     btn.disabled = true;
 
-    fetch(scriptURL, {
+fetch(scriptURL, {
         method: "POST",
         body: JSON.stringify(data)
     })
     .then(res => res.json())
     .then(res => {
         if(res.status === "success"){
-            alert("Data Berhasil Terkirim Secara FINAL! Token " + res.token + " telah diselesaikan.");
-            location.reload();
+            // Pesan sukses tanpa menampilkan token
+            alert("Evaluasi Selesai! Data telah berhasil dikirim ke database.");
+            location.reload(); // Form reset, token otomatis "hilang" dari memory
         } else {
             alert("Gagal: " + res.message);
             btn.innerText = "SUBMIT FINAL";
             btn.disabled = false;
         }
     })
+
     .catch(err => {
         console.error("Error submit:", err);
         alert("Gagal mengirim data. Cek koneksi internet atau script URL.");
