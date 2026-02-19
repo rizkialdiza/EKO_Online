@@ -1651,7 +1651,7 @@ function tampilkanSummary() {
 
         const totalSoal = listSoal.length;
         const belumDijawab = totalSoal - (ya + tidak + tdkUji);
-        const nilaiAkhir = (ya + tidak > 0) ? Math.round((ya / (ya + tidak)) * 100) : 0;
+        const nilaiAkhir = (ya + tidak > 0) ? Math.round((ya / (totalSoal-tdkUji)) * 100) : 0;
 
         // Isi ke elemen Modal
         document.getElementById("sumTotal").innerText = totalSoal;
