@@ -621,14 +621,14 @@ const bankSoal = {
 
   EXCOAL: [
     //UK1
-    {tipe:"EXCOAL", uk:"UK1", soal:4, text:"Apakah Operator dalam kondisi sehat dan menggunakan APD lengkap?"},
-    {tipe:"EXCOAL", uk:"UK1", soal:5, text:"Apakah Operator menggunakan sabuk pengaman?"},
-    {tipe:"EXCOAL", uk:"UK1", soal:6, text:"Apakah Operator melakukan aturan klakson?"},
-    {tipe:"EXCOAL", uk:"UK1", soal:7, text:"Apakah Operator mengaktifkan lampu unit?"},
-    {tipe:"EXCOAL", uk:"UK1", soal:8, text:"Apakah Operator memahami emergency response saat terjadi kebakaran pada unit yang dioperasikan?"},
-    {tipe:"EXCOAL", uk:"UK1", soal:9, text:"Apakah Operator memahami emergency response saat terjadi amblas pada unit yang dioperasikan?"},
-    {tipe:"EXCOAL", uk:"UK1", soal:10, text:"Apakah Operator memahami response saat terjadi breakdown pada unit yang dioperasikan?"},
-    {tipe:"EXCOAL", uk:"UK1", soal:11, text:"Apakah Operator memahami response saat separator pada bucket hilang atau terlepas?"},
+    {tipe:"EXCOAL", uk:"UK1", soal:4, text:"1.1 Apakah Operator dalam kondisi sehat dan menggunakan APD lengkap?"},
+    {tipe:"EXCOAL", uk:"UK1", soal:5, text:"1.2 Apakah Operator menggunakan sabuk pengaman?"},
+    {tipe:"EXCOAL", uk:"UK1", soal:6, text:"1.3 Apakah Operator melakukan aturan klakson?"},
+    {tipe:"EXCOAL", uk:"UK1", soal:7, text:"1.4 Apakah Operator mengaktifkan lampu unit?"},
+    {tipe:"EXCOAL", uk:"UK1", soal:8, text:"1.5 Apakah Operator memahami emergency response saat terjadi kebakaran pada unit yang dioperasikan?"},
+    {tipe:"EXCOAL", uk:"UK1", soal:9, text:"1.6 Apakah Operator memahami emergency response saat terjadi amblas pada unit yang dioperasikan?"},
+    {tipe:"EXCOAL", uk:"UK1", soal:10, text:"1.7 Apakah Operator memahami response saat terjadi breakdown pada unit yang dioperasikan?"},
+    {tipe:"EXCOAL", uk:"UK1", soal:11, text:"1.8 Apakah Operator memahami response saat separator pada bucket hilang atau terlepas?"},
 
     //UK2
     {tipe:"EXCOAL", uk:"UK2", soal:1, text:"2.1 Apakah Operator melaporkan KTA dan/atau TTA kepada Pengawas?"},
