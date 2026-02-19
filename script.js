@@ -617,8 +617,679 @@ const bankSoal = {
     {tipe:"EXCOB", uk:"UK1", soal:1, text:"Bucket terkunci dengan benar?"},
     {tipe:"EXCOB", uk:"UK1", soal:2, text:"Operator cek tekanan hidrolik?"},
     {tipe:"EXCOB", uk:"UK1", soal:3, text:"Operator melakukan Tidak dalam keadaan Fatigue?"}
-  ]
+  ],
+
+  EXCOAL: [
+    //UK1
+    {tipe:"EXCOAL", uk:"UK1", soal:4, text:"Apakah Operator dalam kondisi sehat dan menggunakan APD lengkap?"},
+    {tipe:"EXCOAL", uk:"UK1", soal:5, text:"Apakah Operator menggunakan sabuk pengaman?"},
+    {tipe:"EXCOAL", uk:"UK1", soal:6, text:"Apakah Operator melakukan aturan klakson?"},
+    {tipe:"EXCOAL", uk:"UK1", soal:7, text:"Apakah Operator mengaktifkan lampu unit?"},
+    {tipe:"EXCOAL", uk:"UK1", soal:8, text:"Apakah Operator memahami emergency response saat terjadi kebakaran pada unit yang dioperasikan?"},
+    {tipe:"EXCOAL", uk:"UK1", soal:9, text:"Apakah Operator memahami emergency response saat terjadi amblas pada unit yang dioperasikan?"},
+    {tipe:"EXCOAL", uk:"UK1", soal:10, text:"Apakah Operator memahami response saat terjadi breakdown pada unit yang dioperasikan?"},
+    {tipe:"EXCOAL", uk:"UK1", soal:11, text:"Apakah Operator memahami response saat separator pada bucket hilang atau terlepas?"},
+
+    //UK2
+    {tipe:"EXCOAL", uk:"UK2", soal:1, text:"2.1 Apakah Operator melaporkan KTA dan/atau TTA kepada Pengawas?"},
+    {tipe:"EXCOAL", uk:"UK2", soal:2, text:"2.2 Apakah Operator mengetahui metode pelaporan accident?"},
+    {tipe:"EXCOAL", uk:"UK2", soal:3, text:"2.3 Apakah Operator dapat melakukan pelaporan KTA dan/atau TTA dengan aplikasi Sinergi?"},
+    {tipe:"EXCOAL", uk:"UK2", soal:4, text:"2.4 Apakah Operator melaporkan malfungsi kondisi unit kepada Pengawas/OCR?"},
+    {tipe:"EXCOAL", uk:"UK2", soal:5, text:"2.5 Apakah Operator menggunakan radio komunikasi dengan baik dan benar?"},
+    {tipe:"EXCOAL", uk:"UK2", soal:6, text:"2.6 Apakah Operator memahami target ritase tiap jam pada fleet tersebut?"},
+    {tipe:"EXCOAL", uk:"UK2", soal:7, text:"2.7 Apakah Operator memahami target visual batu bara pada vessel DT?"},
+    {tipe:"EXCOAL", uk:"UK2", soal:8, text:"2.8 Apakah Operator memahami jumlah passing untuk unit yang dioperasikan?"},
+
+    //UK3
+    {tipe:"EXCOAL", uk:"UK3", soal:1, text:"3.1 Apakah Operator mengetahui dimensi unit?"},
+    {tipe:"EXCOAL", uk:"UK3", soal:2, text:"3.2 Apakah Operator mengetahui jarak blind spot unit?"},
+    {tipe:"EXCOAL", uk:"UK3", soal:3, text:"3.3 Apakah Operator mengetahui 5 sistem engine?"},
+    {tipe:"EXCOAL", uk:"UK3", soal:4, text:"3.4 Apakah Operator mengetahui fungsi dari unit tersebut?"},
+    {tipe:"EXCOAL", uk:"UK3", soal:5, text:"3.5 Apakah Operator mengetahui power train pada unit?"},
+    {tipe:"EXCOAL", uk:"UK3", soal:6, text:"3.6 Apakah Operator mengetahui kapasitas fuel unit excavator yang dioperasikannya?"},
+
+    //UK4
+    {tipe:"EXCOAL", uk:"UK4", soal:1, text:"4.1 Apakah Operator memahami fungsi instrumen panel?"},
+    {tipe:"EXCOAL", uk:"UK4", soal:2, text:"4.2 Apakah Operator memahami warning category pada instrumen panel?"},
+    {tipe:"EXCOAL", uk:"UK4", soal:3, text:"4.3 Apakah Operator memahami cara membaca instrumen panel?"},
+    {tipe:"EXCOAL", uk:"UK4", soal:4, text:"4.4 Apakah Operator memahami tindak lanjut jika instrumen panel menyala? (Sampling minimal 3)"},
+    {tipe:"EXCOAL", uk:"UK4", soal:5, text:"4.5 Apakah Operator memahami nama control lever? (Sampling minimal 3)"},
+    {tipe:"EXCOAL", uk:"UK4", soal:6, text:"4.6 Apakah Operator memahami fungsi control lever? (Sampling minimal 3)"},
+    {tipe:"EXCOAL", uk:"UK4", soal:7, text:"4.7 Apakah Operator memahami nama control switch? (Sampling minimal 3)"},
+    {tipe:"EXCOAL", uk:"UK4", soal:8, text:"4.8 Apakah Operator memahami fungsi control switch? (Sampling minimal 3)"},
+
+    //UK5
+    {tipe:"EXCOAL", uk:"UK5", soal:1, text:"5.1 Apakah Operator memahami tujuan P2H?"},
+    {tipe:"EXCOAL", uk:"UK5", soal:2, text:"5.2 Apakah Operator memahami 4 langkah P2H?"},
+    {tipe:"EXCOAL", uk:"UK5", soal:3, text:"5.3 Apakah Operator melakukan pemeriksaan keliling unit?"},
+    {tipe:"EXCOAL", uk:"UK5", soal:4, text:"5.4 Apakah Operator memahami cara pengecekan komponen yang diperiksa saat keliling unit? (Sampling minimal 3)"},
+    {tipe:"EXCOAL", uk:"UK5", soal:5, text:"5.5 Apakah Operator melakukan pemeriksaan di dalam kabin?"},
+    {tipe:"EXCOAL", uk:"UK5", soal:6, text:"5.6 Apakah Operator memahami cara pengecekan komponen di dalam unit? (Sampling minimal 3)"},
+    {tipe:"EXCOAL", uk:"UK5", soal:7, text:"5.7 Apakah Operator melakukan pemeriksaan di atas unit setelah engine menyala?"},
+    {tipe:"EXCOAL", uk:"UK5", soal:8, text:"5.8 Apakah Operator memahami cara pengecekan komponen saat pemeriksaan setelah engine menyala? (Sampling minimal 3)"},
+    {tipe:"EXCOAL", uk:"UK5", soal:9, text:"5.9 Apakah Operator melakukan pemeriksaan setelah operasi?"},
+    {tipe:"EXCOAL", uk:"UK5", soal:10, text:"5.10 Apakah Operator memahami cara pengecekan komponen setelah operasi? (Sampling minimal 3)"},
+    {tipe:"EXCOAL", uk:"UK5", soal:11, text:"5.11 Apakah Operator memahami kode bahaya untuk temuan P2H?"},
+    {tipe:"EXCOAL", uk:"UK5", soal:12, text:"5.12 Apakah Operator menuliskan temuan P2H pada kertas P2H? (Jika terdapat temuan)"},
+    {tipe:"EXCOAL", uk:"UK5", soal:13, text:"5.13 Apakah Operator memahami cara mengisi form P2H?"},
+
+    //UK6
+    {tipe:"EXCOAL", uk:"UK6", soal:1, text:"6.1 Apakah Operator paham apa saja yang termasuk primary dan secondary work excavator loading batu bara?"},
+    {tipe:"EXCOAL", uk:"UK6", soal:2, text:"6.2 Apakah Operator melakukan pekerjaan sesuai dengan plan pekerjaan? (Ditandai dengan patok atau skema dari pengawas)"},
+    {tipe:"EXCOAL", uk:"UK6", soal:3, text:"6.3 Apakah Operator dapat melakukan digging menggunakan unit secara normal?"},
+    {tipe:"EXCOAL", uk:"UK6", soal:4, text:"6.4 Apakah Operator dapat melakukan travel unit secara normal?"},
+    {tipe:"EXCOAL", uk:"UK6", soal:5, text:"6.5 Apakah Operator dapat melakukan swing unit secara normal?"},
+    {tipe:"EXCOAL", uk:"UK6", soal:6, text:"6.6 Apakah Operator dapat melakukan loading dengan teknik loading sisir?"},
+    {tipe:"EXCOAL", uk:"UK6", soal:7, text:"6.7 Apakah Operator dapat menaikkan atau menurunkan unit pada bench secara normal?"},
+    {tipe:"EXCOAL", uk:"UK6", soal:8, text:"6.8 Apakah Operator menggunakan working mode yang sesuai dengan kebutuhannya?"},
+    {tipe:"EXCOAL", uk:"UK6", soal:9, text:"6.9 Apakah Operator memposisikan track sesuai dengan standar saat pelaksanaan loading?"},
+    {tipe:"EXCOAL", uk:"UK6", soal:10, text:"6.10 Apakah Operator menggunakan sudut swing minimal sesuai kondisi bench? (Plan jika bench ideal di bawah 90 derajat)"},
+    {tipe:"EXCOAL", uk:"UK6", soal:11, text:"6.11 Apakah Operator melakukan teknik peletakan material di vessel sesuai standar?"},
+    {tipe:"EXCOAL", uk:"UK6", soal:12, text:"6.12 Apakah muatan sudah sesuai dengan plan passing atau visualnya?"},
+    {tipe:"EXCOAL", uk:"UK6", soal:13, text:"6.13 Apakah Operator mempertahankan dudukan excavator agar tetap rata?"},
+    {tipe:"EXCOAL", uk:"UK6", soal:14, text:"6.14 Apakah Operator parkir dalam posisi rata dan aman?"},
+    {tipe:"EXCOAL", uk:"UK6", soal:15, text:"6.15 Apakah Operator menempatkan bucket di posisi aman saat parkir atau idle?"},
+    {tipe:"EXCOAL", uk:"UK6", soal:16, text:"6.16 Apakah Operator melakukan idle sebelum shut down engine?"},
+    {tipe:"EXCOAL", uk:"UK6", soal:17, text:"6.17 Apakah Operator TIDAK melakukan jack swing?"},
+    {tipe:"EXCOAL", uk:"UK6", soal:18, text:"6.18 Apakah Operator TIDAK melakukan loading hingga track terangkat?"},
+    {tipe:"EXCOAL", uk:"UK6", soal:19, text:"6.19 Apakah Operator TIDAK melakukan end stroke?"},
+    {tipe:"EXCOAL", uk:"UK6", soal:20, text:"6.20 Apakah Operator TIDAK melakukan loading terhadap boulder?"},
+    {tipe:"EXCOAL", uk:"UK6", soal:21, text:"6.21 Apakah Operator TIDAK melakukan loading kontaminasi coal?"},
+    {tipe:"EXCOAL", uk:"UK6", soal:22, text:"6.22 Apakah Operator TIDAK melakukan loading terhadap kontaminasi?"}
+  ],
+  
+  EXCSUP:[
+    //UK1
+    {tipe:"EXCSUP", uk:"UK1", soal:1, text:"1.1 Apakah Operator dalam kondisi sehat dan menggunakan APD Lengkap?"},
+    {tipe:"EXCSUP", uk:"UK1", soal:2, text:"1.2 Apakah Operator menggunakan sabuk pengaman?"},
+    {tipe:"EXCSUP", uk:"UK1", soal:3, text:"1.3 Apakah Operator melakukan aturan klakson?"},
+    {tipe:"EXCSUP", uk:"UK1", soal:4, text:"1.4 Apakah Operator mengaktifkan lampu unit?"},
+    {tipe:"EXCSUP", uk:"UK1", soal:5, text:"1.5 Apakah Operator memahami Emergency Response saat terjadi kebakaran pada unit yang dioperasikan?"},
+    {tipe:"EXCSUP", uk:"UK1", soal:6, text:"1.6 Apakah Operator memahami Emergency Response saat terjadi amblas pada unit yang dioperasikan?"},
+    {tipe:"EXCSUP", uk:"UK1", soal:7, text:"1.7 Apakah Operator memahami Emergency Response saat terjadi breakdown pada unit yang dioperasikan?"},
+    
+    //UK2
+    {tipe:"EXCSUP", uk:"UK2", soal:1, text:"2.1 Apakah Operator melaporkan KTA dan/atau TTA kepada Pengawas?"},
+    {tipe:"EXCSUP", uk:"UK2", soal:2, text:"2.2 Apakah Operator mengetahui metode pelaporan accident?"},
+    {tipe:"EXCSUP", uk:"UK2", soal:3, text:"2.3 Apakah Operator dapat melakukan pelaporan KTA dan/atau TTA dengan aplikasi Sinergi?"},
+    {tipe:"EXCSUP", uk:"UK2", soal:4, text:"2.4 Apakah Operator melaporkan malfungsi kondisi unit kepada Pengawas/OCR?"},
+    {tipe:"EXCSUP", uk:"UK2", soal:5, text:"2.5 Apakah Operator menggunakan radio komunikasi dengan baik dan benar?"},
+    
+    //UK3
+    {tipe:"EXCSUP", uk:"UK3", soal:1, text:"3.1 Apakah Operator mengetahui dimensi unit?"},
+    {tipe:"EXCSUP", uk:"UK3", soal:2, text:"3.2 Apakah Operator mengetahui jarak blind spot unit?"},
+    {tipe:"EXCSUP", uk:"UK3", soal:3, text:"3.3 Apakah Operator mengetahui 5 sistem engine?"},
+    {tipe:"EXCSUP", uk:"UK3", soal:4, text:"3.4 Apakah Operator mengetahui fungsi unit tersebut?"},
+    {tipe:"EXCSUP", uk:"UK3", soal:5, text:"3.5 Apakah Operator mengetahui power train pada unit?"},
+    {tipe:"EXCSUP", uk:"UK3", soal:6, text:"3.6 Apakah Operator mengetahui kapasitas fuel unit excavator yang dioperasikannya?"},
+
+    //UK4
+    {tipe:"EXCSUP", uk:"UK4", soal:1, text:"4.1 Apakah Operator memahami fungsi instrumen panel?"},
+    {tipe:"EXCSUP", uk:"UK4", soal:2, text:"4.2 Apakah Operator memahami warning category pada instrumen panel?"},
+    {tipe:"EXCSUP", uk:"UK4", soal:3, text:"4.3 Apakah Operator memahami cara membaca instrumen panel?"},
+    {tipe:"EXCSUP", uk:"UK4", soal:4, text:"4.4 Apakah Operator memahami tindak lanjut jika instrumen panel menyala? (Sampling minimal 3)"},
+    {tipe:"EXCSUP", uk:"UK4", soal:5, text:"4.5 Apakah Operator memahami nama control lever? (Sampling minimal 3)"},
+    {tipe:"EXCSUP", uk:"UK4", soal:6, text:"4.6 Apakah Operator memahami fungsi control lever? (Sampling minimal 3)"},
+    {tipe:"EXCSUP", uk:"UK4", soal:7, text:"4.7 Apakah Operator memahami nama control switch? (Sampling minimal 3)"},
+    {tipe:"EXCSUP", uk:"UK4", soal:8, text:"4.8 Apakah Operator memahami fungsi control switch? (Sampling minimal 3)"},
+
+    //UK5
+    {tipe:"EXCSUP", uk:"UK5", soal:1, text:"5.1 Apakah Operator memahami tujuan P2H?"},
+    {tipe:"EXCSUP", uk:"UK5", soal:2, text:"5.2 Apakah Operator memahami 4 langkah P2H?"},
+    {tipe:"EXCSUP", uk:"UK5", soal:3, text:"5.3 Apakah Operator melakukan pemeriksaan keliling unit?"},
+    {tipe:"EXCSUP", uk:"UK5", soal:4, text:"5.4 Apakah Operator memahami cara pengecekan komponen yang diperiksa saat keliling unit? (Sampling minimal 3)"},
+    {tipe:"EXCSUP", uk:"UK5", soal:5, text:"5.5 Apakah Operator melakukan pemeriksaan didalam kabin?"},
+    {tipe:"EXCSUP", uk:"UK5", soal:6, text:"5.6 Apakah Operator memahami cara pengecekan komponen didalam unit? (Sampling minimal 3)"},
+    {tipe:"EXCSUP", uk:"UK5", soal:7, text:"5.7 Apakah Operator melakukan pemeriksaan diatas unit setelah engine menyala?"},
+    {tipe:"EXCSUP", uk:"UK5", soal:8, text:"5.8 Apakah Operator memahami cara pengecekan komponen saat pemeriksaan setelah engine menyala? (Sampling minimal 3)"},
+    {tipe:"EXCSUP", uk:"UK5", soal:9, text:"5.9 Apakah Operator melakukan pemeriksaan setelah operasi?"},
+    {tipe:"EXCSUP", uk:"UK5", soal:10, text:"5.10 Apakah Operator memahami cara pengecekan komponen setelah operasi? (Sampling minimal 3)"},
+    {tipe:"EXCSUP", uk:"UK5", soal:11, text:"5.11 Apakah Operator memahami kode bahaya untuk temuan P2H?"},
+    {tipe:"EXCSUP", uk:"UK5", soal:12, text:"5.12 Apakah Operator menuliskan temuan P2H pada kertas P2H? (Jika terdapat temuan)"},
+    {tipe:"EXCSUP", uk:"UK5", soal:13, text:"5.13 Apakah Operator memahami cara mengisi form P2H?"},
+
+    //UK6
+    {tipe:"EXCSUP", uk:"UK6", soal:1, text:"6.1 Apakah Operator memahami plan pekerjaannya?"},
+    {tipe:"EXCSUP", uk:"UK6", soal:2, text:"6.2 Apakah Operator melakukan pekerjaan sesuai dengan plan pekerjaan? (Ditandai dengan patok atau skema dari pengawas)"},
+    {tipe:"EXCSUP", uk:"UK6", soal:3, text:"6.3 Apakah Operator dapat melakukan travel unit secara optimal?"},
+    {tipe:"EXCSUP", uk:"UK6", soal:4, text:"6.4 Apakah Operator dapat melakukan swing unit secara optimal?"},
+    {tipe:"EXCSUP", uk:"UK6", soal:5, text:"6.5 Apakah Operator dapat menaikkan atau menurunkan unit pada lokasi kerjanya secara optimal?"},
+    {tipe:"EXCSUP", uk:"UK6", soal:6, text:"6.6 Apakah Operator menggunakan working mode yang sesuai dengan kebutuhannya?"},
+    {tipe:"EXCSUP", uk:"UK6", soal:7, text:"6.7 Apakah Operator memposisikan track sesuai dengan standar saat pelaksanaan pekerjaannya?"},
+    {tipe:"EXCSUP", uk:"UK6", soal:8, text:"6.8 Apakah Operator mempertahankan dudukan excavator agar tetap rata?"},
+    {tipe:"EXCSUP", uk:"UK6", soal:9, text:"6.9 Apakah Operator parkir dalam posisi rata dan aman?"},
+    {tipe:"EXCSUP", uk:"UK6", soal:10, text:"6.10 Apakah Operator menempatkan bucket/attachment di posisi aman saat parkir atau idle?"},
+    {tipe:"EXCSUP", uk:"UK6", soal:11, text:"6.11 Apakah Operator melakukan idle sebelum shut down engine?"},
+    {tipe:"EXCSUP", uk:"UK6", soal:12, text:"6.12 Apakah Operator paham dan TIDAK melakukan Jack Swing?"},
+    {tipe:"EXCSUP", uk:"UK6", soal:13, text:"6.13 Apakah Operator paham dan TIDAK melakukan pekerjaannya hingga track terangkat?"},
+    {tipe:"EXCSUP", uk:"UK6", soal:14, text:"6.14 Apakah Operator paham dan TIDAK melakukan End Stroke?"}
+    ],
+
+    DZS:[
+    //UK1
+    {tipe:"DZS", uk:"UK1", soal:1, text:"1.1 Apakah Operator dalam kondisi sehat dan menggunakan APD Lengkap?"},
+    {tipe:"DZS", uk:"UK1", soal:2, text:"1.2 Apakah Operator menggunakan sabuk pengaman?"},
+    {tipe:"DZS", uk:"UK1", soal:3, text:"1.3 Apakah Operator melakukan aturan klakson?"},
+    {tipe:"DZS", uk:"UK1", soal:4, text:"1.4 Apakah Operator mengaktifkan lampu unit?"},
+    {tipe:"DZS", uk:"UK1", soal:5, text:"1.5 Apakah operator membawa Kimper yang aktif untuk mengoperasikan unit tersebut?"},
+    {tipe:"DZS", uk:"UK1", soal:6, text:"1.6 Apakah Operator melakukan pekerjaan sesuai dengan plan pekerjaan? (Ditandai dengan patok atau skema dari pengawas)"},
+    {tipe:"DZS", uk:"UK1", soal:7, text:"1.7 Apakah Operator memahami Emergency Response saat terjadi kebakaran pada unit yang dioperasikan?"},
+    {tipe:"DZS", uk:"UK1", soal:8, text:"1.8 Apakah Operator memahami Emergency Response saat terjadi amblas pada unit yang dioperasikan?"},
+    {tipe:"DZS", uk:"UK1", soal:9, text:"1.9 Apakah Operator memahami Response saat terjadi breakdown pada unit yang dioperasikan?"},
+
+    //UK2
+    {tipe:"DZS", uk:"UK2", soal:1, text:"2.1 Apakah Operator melaporkan KTA dan/atau TTA kepada Pengawas?"},
+    {tipe:"DZS", uk:"UK2", soal:2, text:"2.2 Apakah Operator mengetahui metode pelaporan accident?"},
+    {tipe:"DZS", uk:"UK2", soal:3, text:"2.3 Apakah Operator dapat melakukan pelaporan KTA dan/atau TTA dengan aplikasi Sinergi?"},
+    {tipe:"DZS", uk:"UK2", soal:4, text:"2.4 Apakah Operator paham lokasi channel yang sesuai?"},
+    {tipe:"DZS", uk:"UK2", soal:5, text:"2.5 Apakah Operator melaporkan malfungsi kondisi unit kepada Pengawas/OCR?"},
+    {tipe:"DZS", uk:"UK2", soal:6, text:"2.6 Apakah Operator menggunakan radio komunikasi dengan baik dan benar?"},
+
+    //UK3
+    {tipe:"DZS", uk:"UK3", soal:1, text:"3.1 Apakah Operator mengetahui dimensi unit?"},
+    {tipe:"DZS", uk:"UK3", soal:2, text:"3.2 Apakah Operator mengetahui fungsi unit yang dioperasikannya?"},
+    {tipe:"DZS", uk:"UK3", soal:3, text:"3.3 Apakah Operator mengetahui jarak aman unit?"},
+    {tipe:"DZS", uk:"UK3", soal:4, text:"3.4 Apakah Operator mengetahui 5 sistem engine?"},
+    {tipe:"DZS", uk:"UK3", soal:5, text:"3.5 Apakah Operator mengetahui power train pada unit?"},
+    {tipe:"DZS", uk:"UK3", soal:6, text:"3.6 Apakah Operator mengetahui kapasitas fuel unit yang dioperasikannya?"},
+
+    //UK4
+    {tipe:"DZS", uk:"UK4", soal:1, text:"4.1 Apakah Operator memahami fungsi instrumen panel?"},
+    {tipe:"DZS", uk:"UK4", soal:2, text:"4.2 Apakah Operator memahami warning category pada instrumen panel?"},
+    {tipe:"DZS", uk:"UK4", soal:3, text:"4.3 Apakah Operator memahami cara membaca instrumen panel?"},
+    {tipe:"DZS", uk:"UK4", soal:4, text:"4.4 Apakah Operator memahami tindak lanjut jika instrumen panel menyala? (Sampling minimal 3)"},
+    {tipe:"DZS", uk:"UK4", soal:5, text:"4.5 Apakah Operator memahami nama control lever? (Sampling minimal 3)"},
+    {tipe:"DZS", uk:"UK4", soal:6, text:"4.6 Apakah Operator memahami fungsi control lever? (Sampling minimal 3)"},
+    {tipe:"DZS", uk:"UK4", soal:7, text:"4.7 Apakah Operator memahami nama control switch? (Sampling minimal 3)"},
+    {tipe:"DZS", uk:"UK4", soal:8, text:"4.8 Apakah Operator memahami fungsi control switch? (Sampling minimal 3)"},
+
+    //UK5
+    {tipe:"DZS", uk:"UK5", soal:1, text:"5.1 Apakah Operator memahami tujuan P2H?"},
+    {tipe:"DZS", uk:"UK5", soal:2, text:"5.2 Apakah Operator memahami 4 langkah P2H?"},
+    {tipe:"DZS", uk:"UK5", soal:3, text:"5.3 Apakah Operator melakukan pemeriksaan keliling unit?"},
+    {tipe:"DZS", uk:"UK5", soal:4, text:"5.4 Apakah Operator memahami cara pengecekan komponen yang diperiksa saat keliling unit? (Sampling minimal 3)"},
+    {tipe:"DZS", uk:"UK5", soal:5, text:"5.5 Apakah Operator melakukan pemeriksaan didalam kabin?"},
+    {tipe:"DZS", uk:"UK5", soal:6, text:"5.6 Apakah Operator memahami cara pengecekan komponen didalam kabin? (Sampling minimal 3)"},
+    {tipe:"DZS", uk:"UK5", soal:7, text:"5.7 Apakah Operator melakukan pemeriksaan diatas unit setelah engine menyala?"},
+    {tipe:"DZS", uk:"UK5", soal:8, text:"5.8 Apakah Operator memahami cara pengecekan komponen saat pemeriksaan setelah engine menyala? (Sampling minimal 3)"},
+    {tipe:"DZS", uk:"UK5", soal:9, text:"5.9 Apakah Operator melakukan pemeriksaan setelah operasi?"},
+    {tipe:"DZS", uk:"UK5", soal:10, text:"5.10 Apakah Operator memahami cara pengecekan komponen setelah operasi? (Sampling minimal 3)"},
+    {tipe:"DZS", uk:"UK5", soal:11, text:"5.11 Apakah Operator memahami kode bahaya untuk temuan P2H?"},
+    {tipe:"DZS", uk:"UK5", soal:12, text:"5.12 Apakah Operator menuliskan temuan P2H pada form P2H jika terdapat temuan?"},
+    {tipe:"DZS", uk:"UK5", soal:13, text:"5.13 Apakah Operator memahami cara mengisi form P2H?"},
+
+    //UK6
+    {tipe:"DZS", uk:"UK6", soal:1, text:"6.1 Apakah Operator dapat menggunakan travel speed range yang sesuai untuk pekerjaannya? (Kelinci atau kura-kura)"},
+    {tipe:"DZS", uk:"UK6", soal:2, text:"6.2 Apakah Operator dapat melakukan travel maju-mundur unit secara normal?"},
+    {tipe:"DZS", uk:"UK6", soal:3, text:"6.3 Apakah operator hanya mengaktifkan vibration saat putaran RPM di posisi high?"},
+    {tipe:"DZS", uk:"UK6", soal:4, text:"6.4 Apakah operator mengembalikan RPM pada posisi low dan menonaktifkan vibration mode saat idle?"},
+    {tipe:"DZS", uk:"UK6", soal:5, text:"6.5 Apakah operator menahan lever transmisi pada level 0 (Netral) selama 3 detik saat memindahkan dari maju ke mundur dan sebaliknya?"},
+    {tipe:"DZS", uk:"UK6", soal:6, text:"6.6 Apakah Operator parkir dalam posisi rata dan aman?"},
+    {tipe:"DZS", uk:"UK6", soal:7, text:"6.7 Apakah Operator mengembalikan travel lever ke netral saat parkir?"},
+    {tipe:"DZS", uk:"UK6", soal:8, text:"6.8 Apakah Operator melakukan idle sebelum shut down engine?"},
+    {tipe:"DZS", uk:"UK6", soal:9, text:"6.9 Apakah Operator paham dan TIDAK melakukan vibration mundur?"},
+    {tipe:"DZS", uk:"UK6", soal:10, text:"6.10 Apakah Operator paham dan TIDAK melakukan travel di jalan miring?"}
+
+    ],
+
+    DZM:[
+    //UK1
+    {tipe:"DZM", uk:"UK1", soal:1, text:"1.1 Apakah Operator dalam kondisi sehat dan menggunakan APD Lengkap?"},
+    {tipe:"DZM", uk:"UK1", soal:2, text:"1.2 Apakah Operator menggunakan sabuk pengaman?"},
+    {tipe:"DZM", uk:"UK1", soal:3, text:"1.3 Apakah Operator melakukan aturan klakson?"},
+    {tipe:"DZM", uk:"UK1", soal:4, text:"1.4 Apakah Operator mengaktifkan lampu unit?"},
+    {tipe:"DZM", uk:"UK1", soal:5, text:"1.5 Apakah operator membawa Kimper yang aktif untuk mengoperasikan unit tersebut?"},
+    {tipe:"DZM", uk:"UK1", soal:6, text:"1.6 Apakah Operator melakukan pekerjaan sesuai dengan plan pekerjaan? (Ditandai dengan patok atau skema dari pengawas)"},
+    {tipe:"DZM", uk:"UK1", soal:7, text:"1.7 Apakah Operator memahami Emergency Response saat terjadi kebakaran pada unit yang dioperasikan?"},
+    {tipe:"DZM", uk:"UK1", soal:8, text:"1.8 Apakah Operator memahami Emergency Response saat terjadi amblas pada unit yang dioperasikan?"},
+    {tipe:"DZM", uk:"UK1", soal:9, text:"1.9 Apakah Operator memahami Response saat terjadi breakdown pada unit yang dioperasikan?"},
+
+    //UK2
+    {tipe:"DZM", uk:"UK2", soal:1, text:"2.1 Apakah Operator melaporkan KTA dan/atau TTA kepada Pengawas?"},
+    {tipe:"DZM", uk:"UK2", soal:2, text:"2.2 Apakah Operator mengetahui metode pelaporan accident?"},
+    {tipe:"DZM", uk:"UK2", soal:3, text:"2.3 Apakah Operator dapat melakukan pelaporan KTA dan/atau TTA dengan aplikasi Sinergi?"},
+    {tipe:"DZM", uk:"UK2", soal:4, text:"2.4 Apakah Operator melaporkan malfungsi kondisi unit kepada Pengawas/OCR?"},
+    {tipe:"DZM", uk:"UK2", soal:5, text:"2.5 Apakah Operator menggunakan radio komunikasi dengan baik dan benar?"},
+    {tipe:"DZM", uk:"UK2", soal:6, text:"2.6 Apakah Operator paham standar tanggul di area kerjanya?"},
+    {tipe:"DZM", uk:"UK2", soal:7, text:"2.7 Apakah Operator paham standar tanggul di jalan?"},
+
+    //UK3
+    {tipe:"DZM", uk:"UK3", soal:1, text:"3.1 Apakah Operator mengetahui dimensi unit?"},
+    {tipe:"DZM", uk:"UK3", soal:2, text:"3.2 Apakah Operator mengetahui jarak aman unit?"},
+    {tipe:"DZM", uk:"UK3", soal:3, text:"3.3 Apakah Operator mengetahui 5 sistem engine?"},
+    {tipe:"DZM", uk:"UK3", soal:4, text:"3.4 Apakah Operator mengetahui power train pada unit?"},
+    {tipe:"DZM", uk:"UK3", soal:5, text:"3.5 Apakah Operator mengetahui fungsi unit yang dioperasikannya?"},
+    {tipe:"DZM", uk:"UK3", soal:6, text:"3.6 Apakah Operator mengetahui komponen pada undercarriage?"},
+    {tipe:"DZM", uk:"UK3", soal:7, text:"3.7 Apakah Operator mengetahui panjang ripping?"},
+    {tipe:"DZM", uk:"UK3", soal:8, text:"3.8 Apakah Operator mengetahui kapasitas fuel unit dozer yang dioperasikannya?"},
+
+    //UK4
+    {tipe:"DZM", uk:"UK4", soal:1, text:"4.1 Apakah Operator memahami fungsi instrumen panel?"},
+    {tipe:"DZM", uk:"UK4", soal:2, text:"4.2 Apakah Operator memahami warning category pada instrumen panel?"},
+    {tipe:"DZM", uk:"UK4", soal:3, text:"4.3 Apakah Operator memahami cara membaca instrumen panel?"},
+    {tipe:"DZM", uk:"UK4", soal:4, text:"4.4 Apakah Operator memahami tindak lanjut jika instrumen panel menyala? (Sampling minimal 3)"},
+    {tipe:"DZM", uk:"UK4", soal:5, text:"4.5 Apakah Operator memahami nama control lever? (Sampling minimal 3)"},
+    {tipe:"DZM", uk:"UK4", soal:6, text:"4.6 Apakah Operator memahami fungsi control lever? (Sampling minimal 3)"},
+    {tipe:"DZM", uk:"UK4", soal:7, text:"4.7 Apakah Operator memahami nama control switch? (Sampling minimal 3)"},
+    {tipe:"DZM", uk:"UK4", soal:8, text:"4.8 Apakah Operator memahami fungsi control switch? (Sampling minimal 3)"},
+
+    //UK5
+    {tipe:"DZM", uk:"UK5", soal:1, text:"5.1 Apakah Operator memahami tujuan P2H?"},
+    {tipe:"DZM", uk:"UK5", soal:2, text:"5.2 Apakah Operator memahami 4 langkah P2H?"},
+    {tipe:"DZM", uk:"UK5", soal:3, text:"5.3 Apakah Operator melakukan pemeriksaan keliling unit?"},
+    {tipe:"DZM", uk:"UK5", soal:4, text:"5.4 Apakah Operator memahami cara pengecekan komponen yang diperiksa saat keliling unit? (Sampling minimal 3)"},
+    {tipe:"DZM", uk:"UK5", soal:5, text:"5.5 Apakah Operator melakukan pemeriksaan didalam kabin?"},
+    {tipe:"DZM", uk:"UK5", soal:6, text:"5.6 Apakah Operator memahami cara pengecekan komponen didalam kabin? (Sampling minimal 3)"},
+    {tipe:"DZM", uk:"UK5", soal:7, text:"5.7 Apakah Operator melakukan pemeriksaan diatas unit setelah engine menyala?"},
+    {tipe:"DZM", uk:"UK5", soal:8, text:"5.8 Apakah Operator memahami cara pengecekan komponen saat pemeriksaan setelah engine menyala? (Sampling minimal 3)"},
+    {tipe:"DZM", uk:"UK5", soal:9, text:"5.9 Apakah Operator melakukan pemeriksaan setelah operasi?"},
+    {tipe:"DZM", uk:"UK5", soal:10, text:"5.10 Apakah Operator memahami cara pengecekan komponen setelah operasi? (Sampling minimal 3)"},
+    {tipe:"DZM", uk:"UK5", soal:11, text:"5.11 Apakah Operator memahami kode bahaya untuk temuan P2H?"},
+    {tipe:"DZM", uk:"UK5", soal:12, text:"5.12 Apakah Operator menuliskan temuan P2H pada form P2H jika terdapat temuan?"},
+    {tipe:"DZM", uk:"UK5", soal:13, text:"5.13 Apakah Operator memahami cara mengisi form P2H?"},
+
+    //UK6
+    {tipe:"DZM", uk:"UK6", soal:1, text:"6.1 Apakah Operator paham berapa kapasitas blade unitnya?"},
+    {tipe:"DZM", uk:"UK6", soal:2, text:"6.2 Apakah Operator dapat melakukan travel maju-mundur unit secara normal?"},
+    {tipe:"DZM", uk:"UK6", soal:3, text:"6.3 Apakah Operator dapat mengontrol blade secara normal?"},
+    {tipe:"DZM", uk:"UK6", soal:4, text:"6.4 Apakah Operator dapat melakukan scrapping dengan normal?"},
+    {tipe:"DZM", uk:"UK6", soal:5, text:"6.5 Apakah Operator dapat melakukan dozing dengan normal?"},
+    {tipe:"DZM", uk:"UK6", soal:6, text:"6.6 Apakah Operator dapat melakukan ripping dengan normal?"},
+    {tipe:"DZM", uk:"UK6", soal:7, text:"6.7 Apakah Operator dapat melakukan ripping searah urat tanah?"},
+    {tipe:"DZM", uk:"UK6", soal:8, text:"6.8 Apakah Operator dapat membuat tanggul sesuai dengan standar?"},
+    {tipe:"DZM", uk:"UK6", soal:9, text:"6.9 Apakah Operator dapat melakukan slopping dengan normal?"},
+    {tipe:"DZM", uk:"UK6", soal:10, text:"6.10 Apakah Operator dapat melakukan land clearing dengan normal?"},
+    {tipe:"DZM", uk:"UK6", soal:11, text:"6.11 Apakah Operator parkir dalam posisi rata dan aman?"},
+    {tipe:"DZM", uk:"UK6", soal:12, text:"6.12 Apakah Operator menempatkan blade di posisi aman saat parkir atau idle?"},
+    {tipe:"DZM", uk:"UK6", soal:13, text:"6.13 Apakah Operator melakukan idle sebelum shut down engine?"},
+    {tipe:"DZM", uk:"UK6", soal:14, text:"6.14 Apakah Operator paham dan TIDAK melakukan ripping dengan kombinasi steering?"},
+    {tipe:"DZM", uk:"UK6", soal:15, text:"6.15 Apakah Operator paham dan TIDAK melakukan scrap mundur?"},
+    {tipe:"DZM", uk:"UK6", soal:16, text:"6.16 Apakah Operator paham dan TIDAK melakukan dozing hingga track terangkat?"},
+    {tipe:"DZM", uk:"UK6", soal:17, text:"6.17 Apakah Operator paham dan TIDAK melakukan misuse brake?"}
+    ],
+
+    WT:[
+    //UK1
+    {tipe:"WT", uk:"UK1", soal:1, text:"1.1 Apakah Operator dalam kondisi sehat dan menggunakan APD Lengkap?"},
+    {tipe:"WT", uk:"UK1", soal:2, text:"1.2 Apakah Operator menggunakan sabuk pengaman?"},
+    {tipe:"WT", uk:"UK1", soal:3, text:"1.3 Apakah Operator melakukan aturan klakson?"},
+    {tipe:"WT", uk:"UK1", soal:4, text:"1.4 Apakah Operator mengaktifkan lampu unit?"},
+    {tipe:"WT", uk:"UK1", soal:5, text:"1.5 Apakah Operator mengetahui nama rambu? (Sampling minimal 3)"},
+    {tipe:"WT", uk:"UK1", soal:6, text:"1.6 Apakah Operator mengimplementasikan aturan rambu-rambu?"},
+    {tipe:"WT", uk:"UK1", soal:7, text:"1.7 Apakah Operator mengendarai sesuai dengan rambu kecepatan?"},
+    {tipe:"WT", uk:"UK1", soal:8, text:"1.8 Apakah Operator memahami Emergency Response saat terjadi kebakaran pada unit yang dioperasikan?"},
+    {tipe:"WT", uk:"UK1", soal:9, text:"1.9 Apakah Operator memahami Emergency Response saat terjadi steering failure pada unit yang dioperasikan?"},
+    {tipe:"WT", uk:"UK1", soal:10, text:"1.10 Apakah Operator memahami Emergency Response saat terjadi brake failure pada unit yang dioperasikan?"},
+    {tipe:"WT", uk:"UK1", soal:11, text:"1.11 Apakah Operator memahami Emergency Response saat terjadi unit breakdown di jalan?"},
+    {tipe:"WT", uk:"UK1", soal:12, text:"1.12 Apakah Operator memahami Emergency Response pasca penyiraman / jalan licin?"},
+
+    //UK2
+    {tipe:"WT", uk:"UK2", soal:1, text:"2.1 Apakah Operator melaporkan KTA dan/atau TTA kepada Pengawas?"},
+    {tipe:"WT", uk:"UK2", soal:2, text:"2.2 Apakah Operator mengetahui metode pelaporan accident?"},
+    {tipe:"WT", uk:"UK2", soal:3, text:"2.3 Apakah Operator dapat melakukan pelaporan KTA dan/atau TTA dengan aplikasi Sinergi?"},
+    {tipe:"WT", uk:"UK2", soal:4, text:"2.4 Apakah Operator melaporkan malfungsi kondisi unit kepada Pengawas / OCR?"},
+    {tipe:"WT", uk:"UK2", soal:5, text:"2.5 Apakah Operator memahami dan melakukan aturan lampu sein?"},
+    {tipe:"WT", uk:"UK2", soal:6, text:"2.6 Apakah Operator menggunakan radio komunikasi dengan baik dan benar?"},
+
+    //UK3
+    {tipe:"WT", uk:"UK3", soal:1, text:"3.1 Apakah Operator mengetahui dimensi unit?"},
+    {tipe:"WT", uk:"UK3", soal:2, text:"3.2 Apakah Operator mengetahui jarak blind spot unit?"},
+    {tipe:"WT", uk:"UK3", soal:3, text:"3.3 Apakah Operator mengetahui fungsi unit?"},
+    {tipe:"WT", uk:"UK3", soal:4, text:"3.4 Apakah Operator mengetahui 5 sistem engine?"},
+    {tipe:"WT", uk:"UK3", soal:5, text:"3.5 Apakah Operator mengetahui power train pada unit?"},
+    {tipe:"WT", uk:"UK3", soal:6, text:"3.6 Apakah Operator mengetahui kapasitas fuel unit yang dioperasikannya?"},
+
+    //UK4
+    {tipe:"WT", uk:"UK4", soal:1, text:"4.1 Apakah Operator memahami fungsi instrumen panel?"},
+    {tipe:"WT", uk:"UK4", soal:2, text:"4.2 Apakah Operator memahami cara membaca instrumen panel? (Sampling minimal 3)"},
+    {tipe:"WT", uk:"UK4", soal:3, text:"4.3 Apakah Operator memahami warning category pada instrumen panel?"},
+    {tipe:"WT", uk:"UK4", soal:4, text:"4.4 Apakah Operator memahami tindak lanjut jika instrumen panel menyala? (Sampling minimal 3)"},
+    {tipe:"WT", uk:"UK4", soal:5, text:"4.5 Apakah Operator memahami nama control lever & pedal? (Sampling minimal 3)"},
+    {tipe:"WT", uk:"UK4", soal:6, text:"4.6 Apakah Operator memahami fungsi control lever & pedal? (Sampling minimal 3)"},
+
+    //UK5
+    {tipe:"WT", uk:"UK5", soal:1, text:"5.1 Apakah Operator memahami tujuan P2H?"},
+    {tipe:"WT", uk:"UK5", soal:2, text:"5.2 Apakah Operator memahami 4 langkah P2H?"},
+    {tipe:"WT", uk:"UK5", soal:3, text:"5.3 Apakah Operator melakukan pemeriksaan keliling unit?"},
+    {tipe:"WT", uk:"UK5", soal:4, text:"5.4 Apakah Operator memahami komponen yang diperiksa saat keliling unit? (Sampling minimal 3)"},
+    {tipe:"WT", uk:"UK5", soal:5, text:"5.5 Apakah Operator melakukan pemeriksaan diatas unit sebelum engine hidup?"},
+    {tipe:"WT", uk:"UK5", soal:6, text:"5.6 Apakah Operator memahami komponen yang diperiksa saat diatas unit sebelum engine hidup? (Sampling minimal 3)"},
+    {tipe:"WT", uk:"UK5", soal:7, text:"5.7 Apakah Operator melakukan pemeriksaan diatas unit setelah engine hidup?"},
+    {tipe:"WT", uk:"UK5", soal:8, text:"5.8 Apakah Operator memahami komponen yang diperiksa saat diatas unit setelah engine hidup? (Sampling minimal 3)"},
+    {tipe:"WT", uk:"UK5", soal:9, text:"5.9 Apakah Operator melakukan pemeriksaan setelah operasi?"},
+    {tipe:"WT", uk:"UK5", soal:10, text:"5.10 Apakah Operator memahami komponen yang diperiksa setelah operasi? (Sampling minimal 3)"},
+    {tipe:"WT", uk:"UK5", soal:11, text:"5.11 Apakah Operator memahami kode bahaya untuk temuan P2H?"},
+    {tipe:"WT", uk:"UK5", soal:12, text:"5.12 Apakah Operator menuliskan temuan P2H pada kertas P2H?"},
+    {tipe:"WT", uk:"UK5", soal:13, text:"5.13 Apakah Operator memahami cara mengisi form P2H?"},
+
+    //UK6
+    {tipe:"WT", uk:"UK6", soal:1, text:"6.1 Apakah Operator melakukan parkir diarea standar saat pengisian water tank?"},
+    {tipe:"WT", uk:"UK6", soal:2, text:"6.2 Apakah Operator menggunakan kecepatan 10 km/jam saat memasuki area water fill?"},
+    {tipe:"WT", uk:"UK6", soal:3, text:"6.3 Apakah Operator melakukan pengisian water tank dengan tepat?"},
+    {tipe:"WT", uk:"UK6", soal:4, text:"6.4 Apakah Operator mengaktifkan parking brake saat pengisian water tank?"},
+    {tipe:"WT", uk:"UK6", soal:5, text:"6.5 Apakah Operator tidak dalam kondisi basah sebelum menyalakan saklar pompa water fill?"},
+    {tipe:"WT", uk:"UK6", soal:6, text:"6.6 Apakah Operator mematikan engine saat pengisian water tank?"},
+    {tipe:"WT", uk:"UK6", soal:7, text:"6.7 Apakah Operator melakukan uji coba sprayer pasca pengisian water tank?"},
+    {tipe:"WT", uk:"UK6", soal:8, text:"6.8 Apakah Operator mengetahui area jalan yang tidak boleh dilakukan penyiraman? (Sampling minimal 3)"},
+    {tipe:"WT", uk:"UK6", soal:9, text:"6.9 Apakah Operator tidak melakukan neutral coasting?"},
+    {tipe:"WT", uk:"UK6", soal:10, text:"6.10 Apakah Operator tidak melakukan abuse shifting?"},
+    {tipe:"WT", uk:"UK6", soal:11, text:"6.11 Apakah Operator tidak melakukan hunting?"},
+    {tipe:"WT", uk:"UK6", soal:12, text:"6.12 Apakah Operator tidak melakukan gear select harmful?"},
+    {tipe:"WT", uk:"UK6", soal:13, text:"6.13 Apakah Operator tidak melakukan overrunning?"},
+    {tipe:"WT", uk:"UK6", soal:14, text:"6.14 Apakah Operator melakukan pengamatan kondisi jalan sebelum penyiraman?"},
+    {tipe:"WT", uk:"UK6", soal:15, text:"6.15 Apakah Operator mengaktifkan salah satu spray (LH atau RH) sesuai kebutuhan area?"},
+    {tipe:"WT", uk:"UK6", soal:16, text:"6.16 Apakah Operator menjaga kecepatan maksimum 20 km/jam saat penyiraman dan manuver?"},
+    {tipe:"WT", uk:"UK6", soal:17, text:"6.17 Apakah Operator memastikan power indicator light menyala sebelum mengaktifkan sprayer?"},
+    {tipe:"WT", uk:"UK6", soal:18, text:"6.18 Apakah Operator mengaktifkan switch PTO dan main switch pada junction control box sebelum penyiraman?"},
+    {tipe:"WT", uk:"UK6", soal:19, text:"6.19 Apakah Operator melakukan penyiraman secara putus-putus pada semua kondisi jalan?"},
+    {tipe:"WT", uk:"UK6", soal:20, text:"6.20 Apakah Operator mengetahui standar waktu penyiraman 3 detik ON dan 1 detik OFF pada kecepatan 20 km/jam?"},
+    {tipe:"WT", uk:"UK6", soal:21, text:"6.21 Apakah hasil penyiraman menghasilkan pola 9 meter tersiram dan 3 meter tidak tersiram sesuai standar?"},
+    {tipe:"WT", uk:"UK6", soal:22, text:"6.22 Apakah Operator memberikan jeda minimal 30 menit sebelum penyiraman kembali di ruas jalan yang sama?"},
+    {tipe:"WT", uk:"UK6", soal:23, text:"6.23 Apakah Operator memahami tujuan pemberian jeda untuk mencegah over watering?"},
+    {tipe:"WT", uk:"UK6", soal:24, text:"6.24 Apakah Operator mengetahui bahwa jika jarak pandang kurang dari 60 meter sebelum 30 menit harus meminta persetujuan pengawas?"},
+    {tipe:"WT", uk:"UK6", soal:25, text:"6.25 Apakah Operator melakukan pengamatan kondisi jalan saat melintasi tikungan atau persimpangan?"},
+    {tipe:"WT", uk:"UK6", soal:26, text:"6.26 Apakah Operator mematikan sistem penyiraman dan memastikan unit aman setelah selesai bekerja?"}
+
+
+    ],
+
+    LTFT:[
+    //UK1
+    {tipe:"LTFT", uk:"UK1", soal:1, text:"1.1 Apakah Operator dalam kondisi sehat dan menggunakan APD Lengkap?"},
+    {tipe:"LTFT", uk:"UK1", soal:2, text:"1.2 Apakah Operator menggunakan sabuk pengaman?"},
+    {tipe:"LTFT", uk:"UK1", soal:3, text:"1.3 Apakah Operator melakukan aturan klakson?"},
+    {tipe:"LTFT", uk:"UK1", soal:4, text:"1.4 Apakah Operator mengaktifkan lampu unit?"},
+    {tipe:"LTFT", uk:"UK1", soal:5, text:"1.5 Apakah Operator mengetahui nama rambu? (Sampling minimal 3)"},
+    {tipe:"LTFT", uk:"UK1", soal:6, text:"1.6 Apakah Operator mengimplementasikan aturan rambu-rambu?"},
+    {tipe:"LTFT", uk:"UK1", soal:7, text:"1.7 Apakah Operator mengendarai sesuai dengan rambu kecepatan?"},
+    {tipe:"LTFT", uk:"UK1", soal:8, text:"1.8 Apakah Operator memahami Emergency Response saat terjadi kebakaran pada unit yang dioperasikan?"},
+    {tipe:"LTFT", uk:"UK1", soal:9, text:"1.9 Apakah Operator memahami Emergency Response saat terjadi steering failure pada unit yang dioperasikan?"},
+    {tipe:"LTFT", uk:"UK1", soal:10, text:"1.10 Apakah Operator memahami Emergency Response saat terjadi brake failure pada unit yang dioperasikan?"},
+    {tipe:"LTFT", uk:"UK1", soal:11, text:"1.11 Apakah Operator memahami Emergency Response saat terjadi unit breakdown di jalan?"},
+    {tipe:"LTFT", uk:"UK1", soal:12, text:"1.12 Apakah Operator memahami Emergency Response pasca penyiraman / jalan licin?"},
+
+    //UK2
+    {tipe:"LTFT", uk:"UK2", soal:1, text:"2.1 Apakah Operator menyatakan bahwa dirinya fit dan siap mengoperasikan unit?"},
+    {tipe:"LTFT", uk:"UK2", soal:2, text:"2.2 Apakah Operator melaporkan KTA dan/atau TTA kepada Pengawas?"},
+    {tipe:"LTFT", uk:"UK2", soal:3, text:"2.3 Apakah Operator mengetahui metode pelaporan accident?"},
+    {tipe:"LTFT", uk:"UK2", soal:4, text:"2.4 Apakah Operator dapat melakukan pelaporan KTA dan/atau TTA dengan aplikasi Sinergi?"},
+    {tipe:"LTFT", uk:"UK2", soal:5, text:"2.5 Apakah Operator melaporkan malfungsi kondisi unit kepada Pengawas / OCR?"},
+    {tipe:"LTFT", uk:"UK2", soal:6, text:"2.6 Apakah Operator memahami dan melakukan aturan lampu sein?"},
+    {tipe:"LTFT", uk:"UK2", soal:7, text:"2.7 Apakah Operator menggunakan radio komunikasi dengan baik dan benar?"},
+
+    //UK3
+    {tipe:"LTFT", uk:"UK3", soal:1, text:"3.1 Apakah Operator mengetahui dimensi unit?"},
+    {tipe:"LTFT", uk:"UK3", soal:2, text:"3.2 Apakah Operator mengetahui jarak blind spot unit?"},
+    {tipe:"LTFT", uk:"UK3", soal:3, text:"3.3 Apakah Operator mengetahui fungsi unit?"},
+    {tipe:"LTFT", uk:"UK3", soal:4, text:"3.4 Apakah Operator mengetahui 5 sistem engine?"},
+    {tipe:"LTFT", uk:"UK3", soal:5, text:"3.5 Apakah Operator mengetahui power train pada unit?"},
+    {tipe:"LTFT", uk:"UK3", soal:6, text:"3.6 Apakah Operator mengetahui kapasitas fuel unit yang dioperasikannya?"},
+
+    //UK4
+    {tipe:"LTFT", uk:"UK4", soal:1, text:"4.1 Apakah Operator memahami fungsi instrumen panel?"},
+    {tipe:"LTFT", uk:"UK4", soal:2, text:"4.2 Apakah Operator memahami cara membaca instrumen panel? (Sampling minimal 3)"},
+    {tipe:"LTFT", uk:"UK4", soal:3, text:"4.3 Apakah Operator memahami warning category pada instrumen panel?"},
+    {tipe:"LTFT", uk:"UK4", soal:4, text:"4.4 Apakah Operator memahami tindak lanjut jika instrumen panel menyala? (Sampling minimal 3)"},
+    {tipe:"LTFT", uk:"UK4", soal:5, text:"4.5 Apakah Operator memahami nama control lever & pedal? (Sampling minimal 3)"},
+    {tipe:"LTFT", uk:"UK4", soal:6, text:"4.6 Apakah Operator memahami fungsi control lever & pedal? (Sampling minimal 3)"},
+
+    //UK5
+    {tipe:"LTFT", uk:"UK5", soal:1, text:"5.1 Apakah Operator memahami tujuan P2H?"},
+    {tipe:"LTFT", uk:"UK5", soal:2, text:"5.2 Apakah Operator memahami 4 langkah P2H?"},
+    {tipe:"LTFT", uk:"UK5", soal:3, text:"5.3 Apakah Operator melakukan pemeriksaan keliling unit?"},
+    {tipe:"LTFT", uk:"UK5", soal:4, text:"5.4 Apakah Operator memahami komponen yang diperiksa saat keliling unit? (Sampling minimal 3)"},
+    {tipe:"LTFT", uk:"UK5", soal:5, text:"5.5 Apakah Operator melakukan pemeriksaan diatas unit sebelum engine hidup?"},
+    {tipe:"LTFT", uk:"UK5", soal:6, text:"5.6 Apakah Operator memahami komponen yang diperiksa saat diatas unit sebelum engine hidup? (Sampling minimal 3)"},
+    {tipe:"LTFT", uk:"UK5", soal:7, text:"5.7 Apakah Operator melakukan pemeriksaan diatas unit setelah engine hidup?"},
+    {tipe:"LTFT", uk:"UK5", soal:8, text:"5.8 Apakah Operator memahami komponen yang diperiksa saat diatas unit setelah engine hidup? (Sampling minimal 3)"},
+    {tipe:"LTFT", uk:"UK5", soal:9, text:"5.9 Apakah Operator melakukan pemeriksaan setelah operasi?"},
+    {tipe:"LTFT", uk:"UK5", soal:10, text:"5.10 Apakah Operator memahami komponen yang diperiksa setelah operasi? (Sampling minimal 3)"},
+    {tipe:"LTFT", uk:"UK5", soal:11, text:"5.11 Apakah Operator memahami kode bahaya untuk temuan P2H?"},
+    {tipe:"LTFT", uk:"UK5", soal:12, text:"5.12 Apakah Operator menuliskan temuan P2H pada kertas P2H?"},
+    {tipe:"LTFT", uk:"UK5", soal:13, text:"5.13 Apakah Operator memahami cara mengisi form P2H?"},
+
+    //UK6
+    {tipe:"LTFT", uk:"UK6", soal:1, text:"6.1 Apakah Operator memastikan attachment terpasang dengan benar sesuai fungsi dan tidak rusak?"},
+    {tipe:"LTFT", uk:"UK6", soal:2, text:"6.2 Apakah Operator memastikan oli hidrolik berada pada level maksimal?"},
+    {tipe:"LTFT", uk:"UK6", soal:3, text:"6.3 Apakah Operator memastikan pressure gauge menunjukkan 7–8 bar sesuai standar?"},
+    {tipe:"LTFT", uk:"UK6", soal:4, text:"6.4 Apakah Operator menyalakan mesin sebelum mengoperasikan PTO?"},
+    {tipe:"LTFT", uk:"UK6", soal:5, text:"6.5 Apakah Operator mengatur engine speed pada kisaran 800–1200 RPM sesuai prosedur?"},
+    {tipe:"LTFT", uk:"UK6", soal:6, text:"6.6 Apakah Operator membuka ball valve sebelum melakukan pengisian fuel atau lube?"},
+    {tipe:"LTFT", uk:"UK6", soal:7, text:"6.7 Apakah Operator menarik hose reel dengan hati-hati agar tidak terpelintir atau rusak?"},
+    {tipe:"LTFT", uk:"UK6", soal:8, text:"6.8 Apakah Operator menggunakan hose reel ukuran 1 atau 1½ sesuai kebutuhan?"},
+    {tipe:"LTFT", uk:"UK6", soal:9, text:"6.9 Apakah Operator memastikan aliran fuel/lube lancar setelah ball valve dibuka?"},
+    {tipe:"LTFT", uk:"UK6", soal:10, text:"6.10 Apakah Operator memeriksa kondisi hose reel dan sambungan sebelum digunakan?"},
+    {tipe:"LTFT", uk:"UK6", soal:11, text:"6.11 Apakah Operator mengembalikan hose reel ke posisi semula dengan rapi dan aman?"},
+    {tipe:"LTFT", uk:"UK6", soal:12, text:"6.12 Apakah Operator tidak melakukan neutral coasting?"},
+    {tipe:"LTFT", uk:"UK6", soal:13, text:"6.13 Apakah Operator tidak melakukan abuse shifting?"},
+    {tipe:"LTFT", uk:"UK6", soal:14, text:"6.14 Apakah Operator tidak melakukan hunting?"},
+    {tipe:"LTFT", uk:"UK6", soal:15, text:"6.15 Apakah Operator tidak melakukan gear select harmful?"},
+    {tipe:"LTFT", uk:"UK6", soal:16, text:"6.16 Apakah Operator tidak melakukan overrunning?"}
+
+
+    ],
+
+    CT:[
+    //UK1
+    {tipe:"CT", uk:"UK1", soal:1, text:"1.1 Apakah Operator dalam kondisi sehat dan menggunakan APD Lengkap?"},
+    {tipe:"CT", uk:"UK1", soal:2, text:"1.2 Apakah Operator menggunakan sabuk pengaman?"},
+    {tipe:"CT", uk:"UK1", soal:3, text:"1.3 Apakah Operator melakukan aturan klakson?"},
+    {tipe:"CT", uk:"UK1", soal:4, text:"1.4 Apakah Operator mengaktifkan lampu unit?"},
+    {tipe:"CT", uk:"UK1", soal:5, text:"1.5 Apakah Operator mengetahui nama rambu? Sampling minimal 3"},
+    {tipe:"CT", uk:"UK1", soal:6, text:"1.6 Apakah Operator mengimplementasikan aturan rambu-rambu?"},
+    {tipe:"CT", uk:"UK1", soal:7, text:"1.7 Apakah Operator mengendarai sesuai dengan rambu kecepatan?"},
+    {tipe:"CT", uk:"UK1", soal:8, text:"1.8 Apakah Operator memahami Emergency Response saat terjadi kebakaran pada unit yang dioperasikan?"},
+    {tipe:"CT", uk:"UK1", soal:9, text:"1.9 Apakah Operator memahami Emergency Response saat terjadi steering failure pada unit yang dioperasikan?"},
+    {tipe:"CT", uk:"UK1", soal:10, text:"1.10 Apakah Operator memahami Emergency Response saat terjadi brake failure pada unit yang dioperasikan?"},
+    {tipe:"CT", uk:"UK1", soal:11, text:"1.11 Apakah Operator memahami Emergency Response saat terjadi unit breakdown di jalan pada unit yang dioperasikan?"},
+
+    //UK2
+    {tipe:"CT", uk:"UK2", soal:1, text:"2.1 Apakah Operator menyatakan bahwa dirinya fit dan siap mengoperasikan unit?"},
+    {tipe:"CT", uk:"UK2", soal:2, text:"2.2 Apakah Operator melaporkan KTA dan/atau TTA kepada Pengawas?"},
+    {tipe:"CT", uk:"UK2", soal:3, text:"2.3 Apakah Operator mengetahui metode pelaporan accident?"},
+    {tipe:"CT", uk:"UK2", soal:4, text:"2.4 Apakah Operator dapat melakukan pelaporan KTA dan/atau TTA dengan aplikasi Sinergi?"},
+    {tipe:"CT", uk:"UK2", soal:5, text:"2.5 Apakah Operator melaporkan malfungsi kondisi unit kepada Pengawas / OCR?"},
+    {tipe:"CT", uk:"UK2", soal:6, text:"2.6 Apakah Operator memahami dan melakukan aturan lampu sein?"},
+    {tipe:"CT", uk:"UK2", soal:7, text:"2.7 Apakah Operator menggunakan radio komunikasi dengan baik dan benar?"},
+
+    //UK3
+    {tipe:"CT", uk:"UK3", soal:1, text:"3.1 Apakah Operator mengetahui dimensi unit?"},
+    {tipe:"CT", uk:"UK3", soal:2, text:"3.2 Apakah Operator mengetahui jarak blind spot unit?"},
+    {tipe:"CT", uk:"UK3", soal:3, text:"3.3 Apakah Operator mengetahui fungsi unit?"},
+    {tipe:"CT", uk:"UK3", soal:4, text:"3.4 Apakah Operator mengetahui 5 system engine?"},
+    {tipe:"CT", uk:"UK3", soal:5, text:"3.5 Apakah Operator mengetahui power train pada unit?"},
+    {tipe:"CT", uk:"UK3", soal:6, text:"3.6 Apakah Operator mengetahui kapasitas fuel unit yang dioperasikannya?"},
+
+    //UK4
+    {tipe:"CT", uk:"UK4", soal:1, text:"4.1 Apakah Operator memahami fungsi instrumen panel?"},
+    {tipe:"CT", uk:"UK4", soal:2, text:"4.2 Apakah Operator memahami cara membaca instrumen panel? Sampling minimal 3"},
+    {tipe:"CT", uk:"UK4", soal:3, text:"4.3 Apakah Operator memahami warning category pada instrumen panel?"},
+    {tipe:"CT", uk:"UK4", soal:4, text:"4.4 Apakah Operator memahami tindak lanjut jika instrumen panel menyala? Sampling minimal 3"},
+    {tipe:"CT", uk:"UK4", soal:5, text:"4.5 Apakah Operator memahami nama control lever & pedal? Sampling minimal 3"},
+    {tipe:"CT", uk:"UK4", soal:6, text:"4.6 Apakah Operator memahami fungsi control lever & pedal? Sampling minimal 3"},
+
+    //UK5
+    {tipe:"CT", uk:"UK5", soal:1, text:"5.1 Apakah Operator memahami tujuan P2H?"},
+    {tipe:"CT", uk:"UK5", soal:2, text:"5.2 Apakah Operator memahami 4 langkah P2H?"},
+    {tipe:"CT", uk:"UK5", soal:3, text:"5.3 Apakah Operator melakukan pemeriksaan keliling unit?"},
+    {tipe:"CT", uk:"UK5", soal:4, text:"5.4 Apakah Operator memahami komponen yang diperiksa saat keliling unit? Sampling minimal 3"},
+    {tipe:"CT", uk:"UK5", soal:5, text:"5.5 Apakah Operator melakukan pemeriksaan diatas unit sebelum engine hidup?"},
+    {tipe:"CT", uk:"UK5", soal:6, text:"5.6 Apakah Operator memahami komponen yang diperiksa saat diatas unit sebelum engine hidup? Sampling minimal 3"},
+    {tipe:"CT", uk:"UK5", soal:7, text:"5.7 Apakah Operator melakukan pemeriksaan diatas unit setelah engine hidup?"},
+    {tipe:"CT", uk:"UK5", soal:8, text:"5.8 Apakah Operator memahami komponen yang diperiksa saat diatas unit setelah engine hidup? Sampling minimal 3"},
+    {tipe:"CT", uk:"UK5", soal:9, text:"5.9 Apakah Operator melakukan pemeriksaan setelah operasi?"},
+    {tipe:"CT", uk:"UK5", soal:10, text:"5.10 Apakah Operator memahami komponen yang diperiksa setelah operasi? Sampling minimal 3"},
+    {tipe:"CT", uk:"UK5", soal:11, text:"5.11 Apakah Operator memahami kode bahaya untuk temuan P2H?"},
+    {tipe:"CT", uk:"UK5", soal:12, text:"5.12 Apakah Operator menuliskan temuan P2H pada kertas P2H?"},
+    {tipe:"CT", uk:"UK5", soal:13, text:"5.13 Apakah Operator memahami cara mengisi form P2H?"},
+
+    //UK6
+    {tipe:"CT", uk:"UK6", soal:1, text:"6.1 Apakah operator memastikan attachment terpasang dengan benar sesuai fungsi dan tidak mengalami kerusakan?"},
+    {tipe:"CT", uk:"UK6", soal:2, text:"6.2 Apakah operator paham dan mengikuti batas kapasitas beban yang diizinkan?"},
+    {tipe:"CT", uk:"UK6", soal:3, text:"6.3 Apakah operator melakukan aktivitas pengangkatan di area yang datar?"},
+    {tipe:"CT", uk:"UK6", soal:4, text:"6.4 Apakah operator dapat travel unit secara normal?"},
+    {tipe:"CT", uk:"UK6", soal:5, text:"6.5 Apakah operator dapat melakukan aktivitas pengangkatan sesuai arahan out-rigger atau GL yang bertugas?"},
+    {tipe:"CT", uk:"UK6", soal:6, text:"6.6 Apakah operator dapat melakukan parkir unit dengan benar? (termasuk menyesuaikan jarak parkir antar unit)"},
+    {tipe:"CT", uk:"UK6", soal:7, text:"6.7 Apakah operator menggunakan transmisi P saat berhenti untuk aktivitas pengangkatan / lifting?"},
+    {tipe:"CT", uk:"UK6", soal:8, text:"6.8 Apakah Operator terampil dalam mengemudi atau pengendalian steering wheel?"},
+    {tipe:"CT", uk:"UK6", soal:9, text:"6.9 Apakah operator melakukan idle sebelum melakukan shut down engine?"},
+    {tipe:"CT", uk:"UK6", soal:10, text:"6.10 Apakah Operator tidak melakukan neutral coasting?"},
+    {tipe:"CT", uk:"UK6", soal:11, text:"6.11 Apakah Operator tidak melakukan abuse shifting?"},
+    {tipe:"CT", uk:"UK6", soal:12, text:"6.12 Apakah Operator tidak melakukan hunting?"},
+    {tipe:"CT", uk:"UK6", soal:13, text:"6.13 Apakah Operator tidak melakukan gear select harmfull?"},
+    {tipe:"CT", uk:"UK6", soal:14, text:"6.14 Apakah Operator tidak melakukan overrunning?"}
+
+
+    ],
+
+    Grader:[
+    //UK1
+    {tipe:"Grader", uk:"UK1", soal:1, text:"1.1 Apakah Operator dalam kondisi sehat dan menggunakan APD Lengkap?"},
+    {tipe:"Grader", uk:"UK1", soal:2, text:"1.2 Apakah Operator menggunakan sabuk pengaman?"},
+    {tipe:"Grader", uk:"UK1", soal:3, text:"1.3 Apakah Operator melakukan aturan klakson?"},
+    {tipe:"Grader", uk:"UK1", soal:4, text:"1.4 Apakah Operator mengaktifkan lampu unit?"},
+    {tipe:"Grader", uk:"UK1", soal:5, text:"1.5 Apakah Operator mengetahui nama rambu? Sampling minimal 3"},
+    {tipe:"Grader", uk:"UK1", soal:6, text:"1.6 Apakah Operator mengimplementasikan aturan rambu-rambu?"},
+    {tipe:"Grader", uk:"UK1", soal:7, text:"1.7 Apakah Operator mengendarai sesuai dengan rambu kecepatan?"},
+    {tipe:"Grader", uk:"UK1", soal:8, text:"1.8 Apakah Operator memahami Emergency Response saat terjadi kebakaran pada unit yang dioperasikan?"},
+    {tipe:"Grader", uk:"UK1", soal:9, text:"1.9 Apakah Operator memahami Emergency Response saat terjadi steering failure pada unit yang dioperasikan?"},
+    {tipe:"Grader", uk:"UK1", soal:10, text:"1.10 Apakah Operator memahami Emergency Response saat terjadi brake failure pada unit yang dioperasikan?"},
+    {tipe:"Grader", uk:"UK1", soal:11, text:"1.11 Apakah Operator memahami Emergency Response saat terjadi unit breakdown di jalan pada unit yang dioperasikan?"},
+    {tipe:"Grader", uk:"UK1", soal:12, text:"1.12 Apakah Operator memahami Emergency Response pasca penyiraman/jalan licin pada unit yang dioperasikan?"},
+
+    //UK2
+    {tipe:"Grader", uk:"UK2", soal:1, text:"2.1 Apakah Operator menyatakan bahwa dirinya fit dan siap mengoperasikan unit?"},
+    {tipe:"Grader", uk:"UK2", soal:2, text:"2.2 Apakah Operator melaporkan KTA dan/atau TTA kepada Pengawas?"},
+    {tipe:"Grader", uk:"UK2", soal:3, text:"2.3 Apakah Operator mengetahui metode pelaporan accident?"},
+    {tipe:"Grader", uk:"UK2", soal:4, text:"2.4 Apakah Operator dapat melakukan pelaporan KTA dan/atau TTA dengan aplikasi Sinergi?"},
+    {tipe:"Grader", uk:"UK2", soal:5, text:"2.5 Apakah Operator melaporkan malfungsi kondisi unit kepada Pengawas / OCR?"},
+    {tipe:"Grader", uk:"UK2", soal:6, text:"2.6 Apakah Operator memahami dan melakukan aturan lampu sein?"},
+    {tipe:"Grader", uk:"UK2", soal:7, text:"2.7 Apakah Operator menggunakan radio komunikasi dengan baik dan benar?"},
+
+    //UK3
+    {tipe:"Grader", uk:"UK3", soal:1, text:"3.1 Apakah Operator mengetahui dimensi unit?"},
+    {tipe:"Grader", uk:"UK3", soal:2, text:"3.2 Apakah Operator mengetahui jarak aman unit?"},
+    {tipe:"Grader", uk:"UK3", soal:3, text:"3.3 Apakah Operator mengetahui fungsi unit?"},
+    {tipe:"Grader", uk:"UK3", soal:4, text:"3.4 Apakah Operator mengetahui 5 sistem engine?"},
+    {tipe:"Grader", uk:"UK3", soal:5, text:"3.5 Apakah Operator mengetahui power train pada unit?"},
+    {tipe:"Grader", uk:"UK3", soal:6, text:"3.6 Apakah Operator mengetahui kapasitas fuel unit yang dioperasikannya?"},
+
+    //UK4
+    {tipe:"Grader", uk:"UK4", soal:1, text:"4.1 Apakah Operator memahami fungsi instrumen panel?"},
+    {tipe:"Grader", uk:"UK4", soal:2, text:"4.2 Apakah Operator memahami cara membaca instrumen panel? Sampling minimal 3"},
+    {tipe:"Grader", uk:"UK4", soal:3, text:"4.3 Apakah Operator memahami warning category pada instrumen panel?"},
+    {tipe:"Grader", uk:"UK4", soal:4, text:"4.4 Apakah Operator memahami tindak lanjut jika instrumen panel menyala? Sampling minimal 3"},
+    {tipe:"Grader", uk:"UK4", soal:5, text:"4.5 Apakah Operator memahami nama control lever dan pedal? Sampling minimal 3"},
+    {tipe:"Grader", uk:"UK4", soal:6, text:"4.6 Apakah Operator memahami fungsi control lever dan pedal? Sampling minimal 3"},
+
+    //UK5
+    {tipe:"Grader", uk:"UK5", soal:1, text:"5.1 Apakah Operator memahami tujuan P2H?"},
+    {tipe:"Grader", uk:"UK5", soal:2, text:"5.2 Apakah Operator memahami 4 langkah P2H?"},
+    {tipe:"Grader", uk:"UK5", soal:3, text:"5.3 Apakah Operator melakukan pemeriksaan keliling unit?"},
+    {tipe:"Grader", uk:"UK5", soal:4, text:"5.4 Apakah Operator memahami komponen yang diperiksa saat keliling unit? Sampling minimal 3"},
+    {tipe:"Grader", uk:"UK5", soal:5, text:"5.5 Apakah Operator melakukan pemeriksaan diatas unit sebelum engine hidup?"},
+    {tipe:"Grader", uk:"UK5", soal:6, text:"5.6 Apakah Operator memahami komponen yang diperiksa saat diatas unit sebelum engine hidup? Sampling minimal 3"},
+    {tipe:"Grader", uk:"UK5", soal:7, text:"5.7 Apakah Operator melakukan pemeriksaan diatas unit setelah engine hidup?"},
+    {tipe:"Grader", uk:"UK5", soal:8, text:"5.8 Apakah Operator memahami komponen yang diperiksa saat diatas unit setelah engine hidup? Sampling minimal 3"},
+    {tipe:"Grader", uk:"UK5", soal:9, text:"5.9 Apakah Operator melakukan pemeriksaan setelah operasi?"},
+    {tipe:"Grader", uk:"UK5", soal:10, text:"5.10 Apakah Operator memahami komponen yang diperiksa setelah operasi? Sampling minimal 3"},
+    {tipe:"Grader", uk:"UK5", soal:11, text:"5.11 Apakah Operator memahami kode bahaya untuk temuan P2H?"},
+    {tipe:"Grader", uk:"UK5", soal:12, text:"5.12 Apakah Operator menuliskan temuan P2H pada kertas P2H?"},
+    {tipe:"Grader", uk:"UK5", soal:13, text:"5.13 Apakah Operator memahami cara mengisi form P2H?"},
+
+    //UK6
+    {tipe:"Grader", uk:"UK6", soal:1, text:"6.1 Apakah operator telah menaikkan attachment setinggi ±30 cm dan memastikan posisi blade tidak keluar dari lebar unit pada saat travel?"},
+    {tipe:"Grader", uk:"UK6", soal:2, text:"6.2 Apakah operator menyesuaikan transmisi dan kecepatan unit sesuai kondisi medan dan rambu-rambu perjalanan saat travel unit?"},
+    {tipe:"Grader", uk:"UK6", soal:3, text:"6.3 Apakah operator mengemudikan unit dengan terkontrol, menjaga jarak aman antar unit (±50 meter), dan menghindari gerakan steering mendadak?"},
+    {tipe:"Grader", uk:"UK6", soal:4, text:"6.4 Apakah operator mematuhi rambu-rambu lalu lintas di area kerja dan memastikan kecepatan tidak melebihi 40 km/jam?"},
+    {tipe:"Grader", uk:"UK6", soal:5, text:"6.5 Apakah operator telah mengoperasikan unit dengan kecepatan 1 atau 2 saat meratakan permukaan tanah/jalan yang bergelombang?"},
+    {tipe:"Grader", uk:"UK6", soal:6, text:"6.6 Apakah operator menghindari perpindahan speed secara mendadak untuk mencegah kerusakan pada komponen power train?"},
+    {tipe:"Grader", uk:"UK6", soal:7, text:"6.7 Apakah operator mengemudikan unit secara lurus saat menaiki maupun menuruni bukit untuk menjaga kestabilan dan keamanan kerja?"},
+    {tipe:"Grader", uk:"UK6", soal:8, text:"6.8 Apakah operator menginjak brake pedal, menetralkan gear shift, dan menghidupkan kembali engine ketika mesin mati saat menaiki atau menuruni bukit?"},
+    {tipe:"Grader", uk:"UK6", soal:9, text:"6.9 Apakah operator tidak menggeser gear shift lever ke posisi netral atau menekan inching pedal saat menuruni bukit, serta menjaga lever tetap pada posisi maju agar engine berfungsi sebagai brake?"},
+    {tipe:"Grader", uk:"UK6", soal:10, text:"6.10 Apakah operator mengembalikan hose reel ke posisi semula dengan rapi dan aman setelah selesai digunakan?"},
+    {tipe:"Grader", uk:"UK6", soal:11, text:"6.11 Apakah operator memulai pekerjaan grading dari sisi dalam tikungan dengan sudut blade dan cutting edge sesuai standar?"},
+    {tipe:"Grader", uk:"UK6", soal:12, text:"6.12 Apakah operator melakukan scrapping dari bagian tengah badan jalan dengan arah kupasan material menuju tepi jalan tanpa menutup drainage?"},
+    {tipe:"Grader", uk:"UK6", soal:13, text:"6.13 Apakah operator tidak melakukan manuver di area yang baru di-spreading agar hasil permukaan tetap rata?"},
+    {tipe:"Grader", uk:"UK6", soal:14, text:"6.14 Apakah operator tidak mengoperasikan steering atau articulating saat ripper sudah menembus tanah?"},
+    {tipe:"Grader", uk:"UK6", soal:15, text:"6.15 Apakah operator menggunakan differential lock untuk menjaga traksi roda belakang tetap seimbang saat ripping?"},
+    {tipe:"Grader", uk:"UK6", soal:16, text:"6.16 Apakah operator tidak mengoperasikan steering atau articulating saat ripper sudah menembus tanah untuk mencegah kerusakan?"},
+    {tipe:"Grader", uk:"UK6", soal:17, text:"6.17 Apakah Operator tidak melakukan abuse shifting?"},
+    {tipe:"Grader", uk:"UK6", soal:18, text:"6.18 Apakah Operator tidak melakukan hunting?"},
+    {tipe:"Grader", uk:"UK6", soal:19, text:"6.19 Apakah Operator tidak melakukan gear select harmfull?"},
+    {tipe:"Grader", uk:"UK6", soal:20, text:"6.20 Apakah Operator tidak melakukan overrunning?"}
+
+    ],
+
+    Compact:[
+    //UK1
+    {tipe:"COMPACT", uk:"UK1", soal:1, text:"1.1 Apakah Operator dalam kondisi sehat dan menggunakan APD Lengkap?"},
+    {tipe:"COMPACT", uk:"UK1", soal:2, text:"1.2 Apakah Operator menggunakan sabuk pengaman?"},
+    {tipe:"COMPACT", uk:"UK1", soal:3, text:"1.3 Apakah Operator melakukan aturan klakson?"},
+    {tipe:"COMPACT", uk:"UK1", soal:4, text:"1.4 Apakah Operator mengaktifkan lampu unit?"},
+    {tipe:"COMPACT", uk:"UK1", soal:5, text:"1.5 Apakah Operator membawa Kimper yang aktif untuk mengoperasikan unit tersebut?"},
+    {tipe:"COMPACT", uk:"UK1", soal:6, text:"1.6 Apakah Operator melakukan pekerjaan sesuai dengan plan pekerjaan? (Ditandai dengan patok atau skema dari pengawas)"},
+    {tipe:"COMPACT", uk:"UK1", soal:7, text:"1.7 Apakah Operator memahami Emergency Response saat terjadi kebakaran pada unit yang dioperasikan?"},
+    {tipe:"COMPACT", uk:"UK1", soal:8, text:"1.8 Apakah Operator memahami Emergency Response saat terjadi amblas pada unit yang dioperasikan?"},
+    {tipe:"COMPACT", uk:"UK1", soal:9, text:"1.9 Apakah Operator memahami Response saat terjadi breakdown pada unit yang dioperasikan?"},
+
+    //UK2
+    {tipe:"COMPACT", uk:"UK2", soal:1, text:"2.1 Apakah Operator melaporkan KTA dan/atau TTA kepada Pengawas?"},
+    {tipe:"COMPACT", uk:"UK2", soal:2, text:"2.2 Apakah Operator mengetahui metode pelaporan accident?"},
+    {tipe:"COMPACT", uk:"UK2", soal:3, text:"2.3 Apakah Operator dapat melakukan pelaporan KTA dan/atau TTA dengan aplikasi Sinergi?"},
+    {tipe:"COMPACT", uk:"UK2", soal:4, text:"2.4 Apakah Operator paham lokasi channel yang sesuai?"},
+    {tipe:"COMPACT", uk:"UK2", soal:5, text:"2.5 Apakah Operator melaporkan malfungsi kondisi unit kepada Pengawas / OCR?"},
+    {tipe:"COMPACT", uk:"UK2", soal:6, text:"2.6 Apakah Operator menggunakan radio komunikasi dengan baik dan benar?"},
+
+    //UK3
+    {tipe:"COMPACT", uk:"UK3", soal:1, text:"3.1 Apakah Operator mengetahui dimensi unit?"},
+    {tipe:"COMPACT", uk:"UK3", soal:2, text:"3.2 Apakah Operator mengetahui fungsi unit yang dioperasikannya?"},
+    {tipe:"COMPACT", uk:"UK3", soal:3, text:"3.3 Apakah Operator mengetahui jarak aman unit?"},
+    {tipe:"COMPACT", uk:"UK3", soal:4, text:"3.4 Apakah Operator mengetahui 5 sistem engine?"},
+    {tipe:"COMPACT", uk:"UK3", soal:5, text:"3.5 Apakah Operator mengetahui power train pada unit?"},
+    {tipe:"COMPACT", uk:"UK3", soal:6, text:"3.6 Apakah Operator mengetahui kapasitas fuel unit yang dioperasikannya?"},
+
+    //UK4
+    {tipe:"COMPACT", uk:"UK4", soal:1, text:"4.1 Apakah Operator memahami fungsi instrumen panel?"},
+    {tipe:"COMPACT", uk:"UK4", soal:2, text:"4.2 Apakah Operator memahami warning category pada instrumen panel?"},
+    {tipe:"COMPACT", uk:"UK4", soal:3, text:"4.3 Apakah Operator memahami cara membaca instrumen panel?"},
+    {tipe:"COMPACT", uk:"UK4", soal:4, text:"4.4 Apakah Operator memahami tindak lanjut jika instrumen panel menyala? (Sampling minimal 3)"},
+    {tipe:"COMPACT", uk:"UK4", soal:5, text:"4.5 Apakah Operator memahami nama control lever? (Sampling minimal 3)"},
+    {tipe:"COMPACT", uk:"UK4", soal:6, text:"4.6 Apakah Operator memahami fungsi control lever? (Sampling minimal 3)"},
+    {tipe:"COMPACT", uk:"UK4", soal:7, text:"4.7 Apakah Operator memahami nama control switch? (Sampling minimal 3)"},
+    {tipe:"COMPACT", uk:"UK4", soal:8, text:"4.8 Apakah Operator memahami fungsi control switch? (Sampling minimal 3)"},
+
+    //UK5
+    {tipe:"COMPACT", uk:"UK5", soal:1, text:"5.1 Apakah Operator memahami tujuan P2H?"},
+    {tipe:"COMPACT", uk:"UK5", soal:2, text:"5.2 Apakah Operator memahami 4 langkah P2H?"},
+    {tipe:"COMPACT", uk:"UK5", soal:3, text:"5.3 Apakah Operator melakukan pemeriksaan keliling unit?"},
+    {tipe:"COMPACT", uk:"UK5", soal:4, text:"5.4 Apakah Operator memahami cara pengecekan komponen saat keliling unit? (Sampling minimal 3)"},
+    {tipe:"COMPACT", uk:"UK5", soal:5, text:"5.5 Apakah Operator melakukan pemeriksaan didalam kabin?"},
+    {tipe:"COMPACT", uk:"UK5", soal:6, text:"5.6 Apakah Operator memahami cara pengecekan komponen didalam kabin? (Sampling minimal 3)"},
+    {tipe:"COMPACT", uk:"UK5", soal:7, text:"5.7 Apakah Operator melakukan pemeriksaan diatas unit setelah engine menyala?"},
+    {tipe:"COMPACT", uk:"UK5", soal:8, text:"5.8 Apakah Operator memahami cara pengecekan komponen saat engine menyala? (Sampling minimal 3)"},
+    {tipe:"COMPACT", uk:"UK5", soal:9, text:"5.9 Apakah Operator melakukan pemeriksaan setelah operasi?"},
+    {tipe:"COMPACT", uk:"UK5", soal:10, text:"5.10 Apakah Operator memahami cara pengecekan komponen setelah operasi? (Sampling minimal 3)"},
+    {tipe:"COMPACT", uk:"UK5", soal:11, text:"5.11 Apakah Operator memahami kode bahaya untuk temuan P2H?"},
+    {tipe:"COMPACT", uk:"UK5", soal:12, text:"5.12 Apakah Operator menuliskan temuan P2H pada form P2H jika terdapat temuan?"},
+    {tipe:"COMPACT", uk:"UK5", soal:13, text:"5.13 Apakah Operator memahami cara mengisi form P2H?"},
+
+    //UK6
+    {tipe:"COMPACT", uk:"UK6", soal:1, text:"6.1 Apakah Operator dapat menggunakan travel speed range yang sesuai untuk pekerjaannya? (Kelinci atau kura-kura)"},
+    {tipe:"COMPACT", uk:"UK6", soal:2, text:"6.2 Apakah Operator dapat melakukan travel maju - mundur unit secara normal?"},
+    {tipe:"COMPACT", uk:"UK6", soal:3, text:"6.3 Apakah Operator hanya mengaktifkan vibration saat RPM di posisi high?"},
+    {tipe:"COMPACT", uk:"UK6", soal:4, text:"6.4 Apakah Operator mengembalikan RPM pada posisi low dan menonaktifkan vibration mode saat idle?"},
+    {tipe:"COMPACT", uk:"UK6", soal:5, text:"6.5 Apakah Operator menahan lever transmisi pada level 0 (Netral) selama 3 detik saat memindahkan dari maju ke mundur & sebaliknya?"},
+    {tipe:"COMPACT", uk:"UK6", soal:6, text:"6.6 Apakah Operator parkir dalam posisi rata dan aman?"},
+    {tipe:"COMPACT", uk:"UK6", soal:7, text:"6.7 Apakah Operator mengembalikan travel lever ke netral saat parkir?"},
+    {tipe:"COMPACT", uk:"UK6", soal:8, text:"6.8 Apakah Operator melakukan idle sebelum shut down engine?"},
+    {tipe:"COMPACT", uk:"UK6", soal:9, text:"6.9 Apakah Operator paham dan TIDAK melakukan vibration mundur?"},
+    {tipe:"COMPACT", uk:"UK6", soal:10, text:"6.10 Apakah Operator paham dan TIDAK melakukan travel di jalan miring?"}
+
+    ]
+
 };
+
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxIvVSTo3yYVEFm_BxndcHdfOmHScYJLjq7oWbfnWYv8kqmmX0kJvM2Wu3dwm9hPLDt/exec';
 let jawaban = {};
