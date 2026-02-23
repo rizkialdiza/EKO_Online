@@ -1619,18 +1619,37 @@ fetch(scriptURL, {
 }
 
 function submitForm() {
-    // Validasi: Cek apakah sudah ada jawaban
-    if (Object.keys(jawaban).length === 0) {
-        alert("Harap isi evaluasi terlebih dahulu sebelum submit!");
-        return;
-    }
-    
-    // Validasi: Cek apakah Unit dan Nama sudah terisi
-    const nama = document.getElementById("nama").value;
+
+    const nama = document.getElementById("nama").value.trim();
+    const nrp = document.getElementById("nrp").value.trim();
     const unit = document.getElementById("unit").value;
-    if (!nama || !unit) {
-        alert("NRP/Nama dan Unit wajib diisi!");
-        return;
+    const egi = document.getElementById("EGI").value;
+    const noUnit = document.getElementById("No_Unit").value.trim();
+    const evaluator = document.getElementById("Evaluator").value;
+
+    if (!nrp) return alert("NRP wajib diisi!");
+    if (!nama) return alert("Nama belum muncul / tidak ditemukan!");
+    if (!unit) return alert("Unit wajib dipilih!");
+    if (!egi) return alert("EGI wajib dipilih!");
+    if (!noUnit) return alert("Nomor Unit wajib diisi!");
+    if (!evaluator) return alert("Evaluator wajib dipilih!");
+
+    // Minimal ada 1 jawaban
+    if (Object.keys(jawaban).length === 0) {
+        return alert("Minimal harus ada 1 soal yang dijawab!");
+    }
+
+    // Validasi follow-up
+    for (let key in jawaban) {
+        const j = jawaban[key];
+
+        if (j.nilai === 0 && j.ofr === undefined) {
+            return alert("Jika memilih TIDAK, OFR wajib dipilih!");
+        }
+
+        if (j.nilai === -1 && (!j.alasan || j.alasan.trim() === "")) {
+            return alert("Jika memilih TIDAK DIUJI, alasan wajib diisi!");
+        }
     }
 
     tampilkanSummary();
