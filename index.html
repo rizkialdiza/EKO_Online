@@ -111,14 +111,21 @@
 
 <input type="date" id="Tanggal_evaluasi">
 
+<div class="progress-wrapper">
+    <div class="progress-bar">
+        <div id="progressFill"></div>
+    </div>
+    <p id="progressText">0% selesai</p>
+</div>
 
 <div id="soalContainer"></div>
 
 <div id="modalOverlay" class="modal-overlay">
     <div id="summaryBox" class="summary-box" style="display: none;">
-        <h3>RINGKASAN EVALUASI</h3>
+        <h3 style="text-align: center;" >RINGKASAN EVALUASI</h3>
         <hr>
-        <div class="summary-item" style="font-weight: 800;"><span>Total Soal:</span> <b id="sumTotal">0</b></div>
+
+        <div class="summary-item" style="font-weight: 1000;"><span>Total Soal:</span> <b id="sumTotal">0</b></div>
         <div class="summary-item"><span>Jawaban YA:</span> <b id="sumYa" style="color: green;">0</b></div>
         <div class="summary-item"><span>Jawaban TIDAK:</span> <b id="sumTidak" style="color: red;">0</b></div>
         <div class="summary-item"><span>TIDAK DIUJI:</span> <b id="sumTdkUji" style="color: orange;">0</b></div>
@@ -157,4 +164,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
