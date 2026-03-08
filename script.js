@@ -614,9 +614,78 @@ const bankSoal = {
   ],
 
   EXCOB: [
-    {tipe:"EXCOB", uk:"UK1", soal:1, text:"Bucket terkunci dengan benar?"},
-    {tipe:"EXCOB", uk:"UK1", soal:2, text:"Operator cek tekanan hidrolik?"},
-    {tipe:"EXCOB", uk:"UK1", soal:3, text:"Operator melakukan Tidak dalam keadaan Fatigue?"}
+    //UK1
+    {tipe:"EXCOB", uk:"UK1", soal:1, text:"Apakah Operator dalam kondisi sehat dan menggunakan APD lengkap?"},
+    {tipe:"EXCOB", uk:"UK1", soal:2, text:"Apakah Operator menggunakan sabuk pengaman?"},
+    {tipe:"EXCOB", uk:"UK1", soal:3, text:"Apakah Operator melakukan aturan klakson?"},
+    {tipe:"EXCOB", uk:"UK1", soal:4, text:"Apakah Operator mengaktifkan lampu unit?"},
+    {tipe:"EXCOB", uk:"UK1", soal:5, text:"Apakah Operator memahami emergency response saat terjadi kebakaran pada unit yang dioperasikan?"},
+    {tipe:"EXCOB", uk:"UK1", soal:6, text:"Apakah Operator memahami emergency response saat terjadi amblas pada unit yang dioperasikan?"},
+    {tipe:"EXCOB", uk:"UK1", soal:7, text:"Apakah Operator memahami response saat terjadi breakdown pada unit yang dioperasikan?"},
+
+    //UK2
+    {tipe:"EXCOB", uk:"UK2", soal:1, text:"Apakah Operator melaporkan KTA dan/atau TTA kepada Pengawas?"},
+    {tipe:"EXCOB", uk:"UK2", soal:2, text:"Apakah Operator mengetahui metode pelaporan accident?"},
+    {tipe:"EXCOB", uk:"UK2", soal:3, text:"Apakah Operator dapat melakukan pelaporan KTA dan/atau TTA dengan aplikasi Sinergi?"},
+    {tipe:"EXCOB", uk:"UK2", soal:4, text:"Apakah Operator melaporkan malfungsi kondisi unit kepada Pengawas atau OCR?"},
+    {tipe:"EXCOB", uk:"UK2", soal:5, text:"Apakah Operator menggunakan radio komunikasi dengan baik dan benar?"},
+    {tipe:"EXCOB", uk:"UK2", soal:6, text:"Apakah Operator memahami target ritase tiap jam pada fleet tersebut?"},
+    {tipe:"EXCOB", uk:"UK2", soal:7, text:"Apakah Operator memahami target tonase pada payload?"},
+    {tipe:"EXCOB", uk:"UK2", soal:8, text:"Apakah Operator memahami jumlah passing untuk unit yang dioperasikan?"},
+
+    //UK3
+    {tipe:"EXCOB", uk:"UK3", soal:1, text:"Apakah Operator mengetahui dimensi unit?"},
+    {tipe:"EXCOB", uk:"UK3", soal:2, text:"Apakah Operator mengetahui jarak blind spot unit?"},
+    {tipe:"EXCOB", uk:"UK3", soal:3, text:"Apakah Operator mengetahui 5 sistem engine?"},
+    {tipe:"EXCOB", uk:"UK3", soal:4, text:"Apakah Operator mengetahui fungsi dari unit tersebut?"},
+    {tipe:"EXCOB", uk:"UK3", soal:5, text:"Apakah Operator mengetahui power train pada unit?"},
+    {tipe:"EXCOB", uk:"UK3", soal:6, text:"Apakah Operator mengetahui kapasitas fuel unit excavator yang dioperasikannya?"},
+
+    //UK4
+    {tipe:"EXCOB", uk:"UK4", soal:1, text:"Apakah Operator memahami fungsi instrumen panel?"},
+    {tipe:"EXCOB", uk:"UK4", soal:2, text:"Apakah Operator memahami warning category pada instrumen panel?"},
+    {tipe:"EXCOB", uk:"UK4", soal:3, text:"Apakah Operator memahami cara membaca instrumen panel?"},
+    {tipe:"EXCOB", uk:"UK4", soal:4, text:"Apakah Operator memahami tindak lanjut jika instrumen panel menyala? Sampling minimal 3"},
+    {tipe:"EXCOB", uk:"UK4", soal:5, text:"Apakah Operator mengetahui nama control lever? Sampling minimal 3"},
+    {tipe:"EXCOB", uk:"UK4", soal:6, text:"Apakah Operator memahami fungsi control lever? Sampling minimal 3"},
+    {tipe:"EXCOB", uk:"UK4", soal:7, text:"Apakah Operator mengetahui nama control switch? Sampling minimal 3"},
+    {tipe:"EXCOB", uk:"UK4", soal:8, text:"Apakah Operator memahami fungsi control switch? Sampling minimal 3"},
+
+    //UK5
+    {tipe:"EXCOB", uk:"UK5", soal:1, text:"Apakah Operator memahami tujuan P2H?"},
+    {tipe:"EXCOB", uk:"UK5", soal:2, text:"Apakah Operator memahami 4 langkah P2H?"},
+    {tipe:"EXCOB", uk:"UK5", soal:3, text:"Apakah Operator melakukan pemeriksaan keliling unit?"},
+    {tipe:"EXCOB", uk:"UK5", soal:4, text:"Apakah Operator memahami cara pengecekan komponen saat keliling unit? Sampling minimal 3"},
+    {tipe:"EXCOB", uk:"UK5", soal:5, text:"Apakah Operator melakukan pemeriksaan di dalam kabin?"},
+    {tipe:"EXCOB", uk:"UK5", soal:6, text:"Apakah Operator memahami cara pengecekan komponen di dalam unit? Sampling minimal 3"},
+    {tipe:"EXCOB", uk:"UK5", soal:7, text:"Apakah Operator melakukan pemeriksaan di atas unit setelah engine menyala?"},
+    {tipe:"EXCOB", uk:"UK5", soal:8, text:"Apakah Operator memahami cara pengecekan komponen saat engine menyala? Sampling minimal 3"},
+    {tipe:"EXCOB", uk:"UK5", soal:9, text:"Apakah Operator melakukan pemeriksaan setelah operasi?"},
+    {tipe:"EXCOB", uk:"UK5", soal:10, text:"Apakah Operator memahami cara pengecekan komponen setelah operasi? Sampling minimal 3"},
+    {tipe:"EXCOB", uk:"UK5", soal:11, text:"Apakah Operator memahami kode bahaya untuk temuan P2H?"},
+    {tipe:"EXCOB", uk:"UK5", soal:12, text:"Apakah Operator menuliskan temuan P2H pada kertas P2H jika terdapat temuan?"},
+    {tipe:"EXCOB", uk:"UK5", soal:13, text:"Apakah Operator memahami cara mengisi form P2H?"},
+
+    //UK6
+    {tipe:"EXCOB", uk:"UK6", soal:1, text:"Apakah Operator melakukan pekerjaan sesuai dengan plan pekerjaan?"},
+    {tipe:"EXCOB", uk:"UK6", soal:2, text:"Apakah Operator memposisikan track sesuai standar saat pelaksanaan loading?"},
+    {tipe:"EXCOB", uk:"UK6", soal:3, text:"Apakah Operator dapat melakukan digging di bawah plan?"},
+    {tipe:"EXCOB", uk:"UK6", soal:4, text:"Apakah Operator tidak melakukan loading hingga track terangkat?"},
+    {tipe:"EXCOB", uk:"UK6", soal:5, text:"Apakah Operator memaksimalkan Bucket Fill Factor (BFF)?"},
+    {tipe:"EXCOB", uk:"UK6", soal:6, text:"Apakah Operator menggunakan sudut swing optimal?"},
+    {tipe:"EXCOB", uk:"UK6", soal:7, text:"Apakah Operator melakukan teknik peletakan material di vessel sesuai standar?"},
+    {tipe:"EXCOB", uk:"UK6", soal:8, text:"Apakah muatan operator sesuai dengan plan passing?"},
+    {tipe:"EXCOB", uk:"UK6", soal:9, text:"Apakah Operator mempertahankan dudukan excavator agar tetap rata?"},
+    {tipe:"EXCOB", uk:"UK6", soal:10, text:"Apakah Operator dapat menaikkan atau menurunkan unit pada bench secara normal?"},
+    {tipe:"EXCOB", uk:"UK6", soal:11, text:"Apakah Operator tidak melakukan jack swing?"},
+    {tipe:"EXCOB", uk:"UK6", soal:12, text:"Apakah Operator tidak melakukan end stroke?"},
+    {tipe:"EXCOB", uk:"UK6", soal:13, text:"Apakah Operator menggunakan working mode yang sesuai?"},
+    {tipe:"EXCOB", uk:"UK6", soal:14, text:"Apakah Operator dapat melakukan travel unit secara optimal?"},
+    {tipe:"EXCOB", uk:"UK6", soal:15, text:"Apakah Operator melakukan idle sebelum shut down engine?"},
+    {tipe:"EXCOB", uk:"UK6", soal:16, text:"Apakah Operator menempatkan bucket di posisi aman saat parkir atau idle?"},
+    {tipe:"EXCOB", uk:"UK6", soal:17, text:"Apakah Operator parkir dalam posisi rata dan aman?"},
+    {tipe:"EXCOB", uk:"UK6", soal:18, text:"Apakah Operator memahami primary dan secondary work excavator loading?"},
+    {tipe:"EXCOB", uk:"UK6", soal:19, text:"Apakah Operator memahami plan cycle time excavator yang dioperasikannya?"}
   ],
 
   EXCOAL: [
@@ -1383,6 +1452,7 @@ function loadSoal() {
                 </div>
             </div>`;
     });
+    updateProgress();
 }
 
 function renderFollowUp(key, d) {
@@ -1412,18 +1482,23 @@ function jawab(btn, nilai) {
     const key = div.dataset.key;
 
     // Cek apakah tombol ini sudah aktif sebelumnya (Klik kedua kali)
+
     if (btn.classList.contains("active")) {
-        // 1. Hapus dari variabel jawaban
-        delete jawaban[key];
+    // 1. Hapus dari variabel jawaban
+    delete jawaban[key];
 
-        // 2. Hapus class active dari semua tombol di grup itu
-        const groupUtama = div.querySelector(".button-group");
-        groupUtama.querySelectorAll("button").forEach(b => b.classList.remove("active"));
+    // 2. Hapus class active dari semua tombol di grup itu
+    const groupUtama = div.querySelector(".button-group");
+    groupUtama.querySelectorAll("button").forEach(b => b.classList.remove("active"));
 
-        // 3. Kosongkan area followup (OFR/Alasan)
-        follow.innerHTML = "";
-        return; // Berhenti di sini (Toggle Off)
-    }
+    // 3. Kosongkan area followup
+    follow.innerHTML = "";
+
+    // UPDATE PROGRESS
+    updateProgress();
+
+    return;
+}
 
     // --- Jika Klik Pertama Kali (Toggle On) ---
     
@@ -1439,6 +1514,8 @@ function jawab(btn, nilai) {
 
     // 4. Render Follow Up (OFR atau Alasan)
     follow.innerHTML = renderFollowUp(key, jawaban[key]);
+    
+    updateProgress();
 }
 
 function jawabOFR(btn, key, nilai) {
@@ -1554,7 +1631,26 @@ function simpanDraft(btnDraft) {
 }
 
 function kirimFinal() {
-    // 1. Validasi awal
+
+    tandaiSoalKosong();
+
+    //Validasi awal
+    const unitTerpilih = document.getElementById("unit").value;
+    const totalSoal = bankSoal[unitTerpilih] ? bankSoal[unitTerpilih].length : 0;
+    const jumlahJawaban = Object.keys(jawaban).length;
+
+    if (jumlahJawaban < totalSoal) {
+
+    const sisa = totalSoal - jumlahJawaban;
+    alert("Masih ada " + sisa + " soal yang belum dijawab!");
+    closeSummary(); // tutup modal
+    setTimeout(() => {
+        scrollKeSoalKosong();
+    }, 200);
+
+    return;
+}
+
     if (!isSigned) return alert("Wajib tanda tangan sebelum kirim!");
     
     const btn = document.getElementById("btnKirimFinal");
@@ -1702,3 +1798,48 @@ function closeSummary() {
 window.onload = function() {
     initSignature();
 };
+
+function updateProgress(){
+
+    const unit = document.getElementById("unit").value;
+    if(!unit || !bankSoal[unit]) return;
+
+    const total = bankSoal[unit].length;
+    const answered = Object.keys(jawaban).length;
+
+    const percent = Math.round((answered/total)*100);
+
+    document.getElementById("progressFill").style.width = percent+"%";
+    document.getElementById("progressText").innerText =
+        answered + " / " + total + " Soal Sudah Dijawab ("+percent+"%)";
+}
+
+function tandaiSoalKosong(){
+
+    const unit = document.getElementById("unit").value;
+    if(!unit || !bankSoal[unit]) return;
+
+    document.querySelectorAll(".soal").forEach(div=>{
+        const key = div.dataset.key;
+
+        if(!jawaban[key]){
+            div.classList.add("belum");
+        }else{
+            div.classList.remove("belum");
+        }
+    });
+
+}
+
+function scrollKeSoalKosong(){
+
+    const pertama = document.querySelector(".soal.belum");
+
+    if(pertama){
+        pertama.scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
+    }
+}
+
