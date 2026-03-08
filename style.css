@@ -191,6 +191,8 @@ option:disabled{
     to { opacity: 1; }
 }
 
+
+
 .summary-box {
     position: fixed;
     top: 50%; left: 50%;
@@ -304,3 +306,38 @@ option:disabled{
 /* Warna saat OFR dipilih */
 .btn-ofr-ya.active { background-color: #28a745; color: white; }
 .btn-ofr-tidak.active { background-color: #dc3545; color: white; }
+
+.progress-wrapper{
+    margin:20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #f4f6f8;
+    padding:10px 0;
+}
+
+.progress-bar{
+    width:100%;
+    height:14px;
+    background:#eee;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+#progressFill{
+    height:100%;
+    width:0%;
+    background:#2ecc71;
+    transition:0.3s;
+}
+
+.soal.belum{
+    border:2px solid #ff4d4d;
+    background:#fff5f5;
+}
+
+#progressText{
+    font-size:14px;
+    margin-top:5px;
+    font-weight: bold;
+}
