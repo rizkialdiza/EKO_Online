@@ -548,8 +548,8 @@ const bankSoal = {
     {tipe:"DTM", uk:"UK2", soal:6, text:"2.6 Apakah Operator menggunakan radio komunikasi dengan baik dan benar?"},
     {tipe:"DTM", uk:"UK2", soal:7, text:"2.7 Apakah Operator memahami target ritase tiap jam pada fleet tsb?"},
     {tipe:"DTM", uk:"UK2", soal:8, text:"2.8 Apakah Operator memahami jumlah passing untuk unit yang dioperasikan?"},
-    {tipe:"DTM", uk:"UK2", soal:7, text:"2.9 Apakah Operator memahami jumlah passing untuk unit yang dioperasikan?"},
-    {tipe:"DTM", uk:"UK2", soal:8, text:"2.10 Apakah Operator menyampaikan ke Operator Loader saat muatan kurang?"},
+    {tipe:"DTM", uk:"UK2", soal:9, text:"2.9 Apakah Operator memahami jumlah passing untuk unit yang dioperasikan?"},
+    {tipe:"DTM", uk:"UK2", soal:10, text:"2.10 Apakah Operator menyampaikan ke Operator Loader saat muatan kurang?"},
 
     //UK3
     {tipe:"DTM", uk:"UK3", soal:1, text:"3.1 Apakah Operator mengetahui dimensi unit?"},
@@ -615,77 +615,77 @@ const bankSoal = {
 
   EXCOB: [
     //UK1
-    {tipe:"EXCOB", uk:"UK1", soal:1, text:"Apakah Operator dalam kondisi sehat dan menggunakan APD lengkap?"},
-    {tipe:"EXCOB", uk:"UK1", soal:2, text:"Apakah Operator menggunakan sabuk pengaman?"},
-    {tipe:"EXCOB", uk:"UK1", soal:3, text:"Apakah Operator melakukan aturan klakson?"},
-    {tipe:"EXCOB", uk:"UK1", soal:4, text:"Apakah Operator mengaktifkan lampu unit?"},
-    {tipe:"EXCOB", uk:"UK1", soal:5, text:"Apakah Operator memahami emergency response saat terjadi kebakaran pada unit yang dioperasikan?"},
-    {tipe:"EXCOB", uk:"UK1", soal:6, text:"Apakah Operator memahami emergency response saat terjadi amblas pada unit yang dioperasikan?"},
-    {tipe:"EXCOB", uk:"UK1", soal:7, text:"Apakah Operator memahami response saat terjadi breakdown pada unit yang dioperasikan?"},
+    {tipe:"EXCOB", uk:"UK1", soal:1, text:"1.1 Apakah Operator dalam kondisi sehat dan menggunakan APD lengkap?"},
+    {tipe:"EXCOB", uk:"UK1", soal:2, text:"1.2 Apakah Operator menggunakan sabuk pengaman?"},
+    {tipe:"EXCOB", uk:"UK1", soal:3, text:"1.3 Apakah Operator melakukan aturan klakson?"},
+    {tipe:"EXCOB", uk:"UK1", soal:4, text:"1.4 Apakah Operator mengaktifkan lampu unit?"},
+    {tipe:"EXCOB", uk:"UK1", soal:5, text:"1.5 Apakah Operator memahami emergency response saat terjadi kebakaran pada unit yang dioperasikan?"},
+    {tipe:"EXCOB", uk:"UK1", soal:6, text:"1.6 Apakah Operator memahami emergency response saat terjadi amblas pada unit yang dioperasikan?"},
+    {tipe:"EXCOB", uk:"UK1", soal:7, text:"1.7 Apakah Operator memahami response saat terjadi breakdown pada unit yang dioperasikan?"},
 
     //UK2
-    {tipe:"EXCOB", uk:"UK2", soal:1, text:"Apakah Operator melaporkan KTA dan/atau TTA kepada Pengawas?"},
-    {tipe:"EXCOB", uk:"UK2", soal:2, text:"Apakah Operator mengetahui metode pelaporan accident?"},
-    {tipe:"EXCOB", uk:"UK2", soal:3, text:"Apakah Operator dapat melakukan pelaporan KTA dan/atau TTA dengan aplikasi Sinergi?"},
-    {tipe:"EXCOB", uk:"UK2", soal:4, text:"Apakah Operator melaporkan malfungsi kondisi unit kepada Pengawas atau OCR?"},
-    {tipe:"EXCOB", uk:"UK2", soal:5, text:"Apakah Operator menggunakan radio komunikasi dengan baik dan benar?"},
-    {tipe:"EXCOB", uk:"UK2", soal:6, text:"Apakah Operator memahami target ritase tiap jam pada fleet tersebut?"},
-    {tipe:"EXCOB", uk:"UK2", soal:7, text:"Apakah Operator memahami target tonase pada payload?"},
-    {tipe:"EXCOB", uk:"UK2", soal:8, text:"Apakah Operator memahami jumlah passing untuk unit yang dioperasikan?"},
+    {tipe:"EXCOB", uk:"UK2", soal:1, text:"2.1 Apakah Operator melaporkan KTA dan/atau TTA kepada Pengawas?"},
+    {tipe:"EXCOB", uk:"UK2", soal:2, text:"2.2 Apakah Operator mengetahui metode pelaporan accident?"},
+    {tipe:"EXCOB", uk:"UK2", soal:3, text:"2.3 Apakah Operator dapat melakukan pelaporan KTA dan/atau TTA dengan aplikasi Sinergi?"},
+    {tipe:"EXCOB", uk:"UK2", soal:4, text:"2.4 Apakah Operator melaporkan malfungsi kondisi unit kepada Pengawas atau OCR?"},
+    {tipe:"EXCOB", uk:"UK2", soal:5, text:"2.5 Apakah Operator menggunakan radio komunikasi dengan baik dan benar?"},
+    {tipe:"EXCOB", uk:"UK2", soal:6, text:"2.6 Apakah Operator memahami target ritase tiap jam pada fleet tersebut?"},
+    {tipe:"EXCOB", uk:"UK2", soal:7, text:"2.7 Apakah Operator memahami target tonase pada payload?"},
+    {tipe:"EXCOB", uk:"UK2", soal:8, text:"2.8 Apakah Operator memahami jumlah passing untuk unit yang dioperasikan?"},
 
     //UK3
-    {tipe:"EXCOB", uk:"UK3", soal:1, text:"Apakah Operator mengetahui dimensi unit?"},
-    {tipe:"EXCOB", uk:"UK3", soal:2, text:"Apakah Operator mengetahui jarak blind spot unit?"},
-    {tipe:"EXCOB", uk:"UK3", soal:3, text:"Apakah Operator mengetahui 5 sistem engine?"},
-    {tipe:"EXCOB", uk:"UK3", soal:4, text:"Apakah Operator mengetahui fungsi dari unit tersebut?"},
-    {tipe:"EXCOB", uk:"UK3", soal:5, text:"Apakah Operator mengetahui power train pada unit?"},
-    {tipe:"EXCOB", uk:"UK3", soal:6, text:"Apakah Operator mengetahui kapasitas fuel unit excavator yang dioperasikannya?"},
+    {tipe:"EXCOB", uk:"UK3", soal:1, text:"3.1 Apakah Operator mengetahui dimensi unit?"},
+    {tipe:"EXCOB", uk:"UK3", soal:2, text:"3.2 Apakah Operator mengetahui jarak blind spot unit?"},
+    {tipe:"EXCOB", uk:"UK3", soal:3, text:"3.3 Apakah Operator mengetahui 5 sistem engine?"},
+    {tipe:"EXCOB", uk:"UK3", soal:4, text:"3.4 Apakah Operator mengetahui fungsi dari unit tersebut?"},
+    {tipe:"EXCOB", uk:"UK3", soal:5, text:"3.5 Apakah Operator mengetahui power train pada unit?"},
+    {tipe:"EXCOB", uk:"UK3", soal:6, text:"3.6 Apakah Operator mengetahui kapasitas fuel unit excavator yang dioperasikannya?"},
 
     //UK4
-    {tipe:"EXCOB", uk:"UK4", soal:1, text:"Apakah Operator memahami fungsi instrumen panel?"},
-    {tipe:"EXCOB", uk:"UK4", soal:2, text:"Apakah Operator memahami warning category pada instrumen panel?"},
-    {tipe:"EXCOB", uk:"UK4", soal:3, text:"Apakah Operator memahami cara membaca instrumen panel?"},
-    {tipe:"EXCOB", uk:"UK4", soal:4, text:"Apakah Operator memahami tindak lanjut jika instrumen panel menyala? Sampling minimal 3"},
-    {tipe:"EXCOB", uk:"UK4", soal:5, text:"Apakah Operator mengetahui nama control lever? Sampling minimal 3"},
-    {tipe:"EXCOB", uk:"UK4", soal:6, text:"Apakah Operator memahami fungsi control lever? Sampling minimal 3"},
-    {tipe:"EXCOB", uk:"UK4", soal:7, text:"Apakah Operator mengetahui nama control switch? Sampling minimal 3"},
-    {tipe:"EXCOB", uk:"UK4", soal:8, text:"Apakah Operator memahami fungsi control switch? Sampling minimal 3"},
+    {tipe:"EXCOB", uk:"UK4", soal:1, text:"4.1 Apakah Operator memahami fungsi instrumen panel?"},
+    {tipe:"EXCOB", uk:"UK4", soal:2, text:"4.2 Apakah Operator memahami warning category pada instrumen panel?"},
+    {tipe:"EXCOB", uk:"UK4", soal:3, text:"4.3 Apakah Operator memahami cara membaca instrumen panel?"},
+    {tipe:"EXCOB", uk:"UK4", soal:4, text:"4.4 Apakah Operator memahami tindak lanjut jika instrumen panel menyala? Sampling minimal 3"},
+    {tipe:"EXCOB", uk:"UK4", soal:5, text:"4.5 Apakah Operator mengetahui nama control lever? Sampling minimal 3"},
+    {tipe:"EXCOB", uk:"UK4", soal:6, text:"4.6 Apakah Operator memahami fungsi control lever? Sampling minimal 3"},
+    {tipe:"EXCOB", uk:"UK4", soal:7, text:"4.7 Apakah Operator mengetahui nama control switch? Sampling minimal 3"},
+    {tipe:"EXCOB", uk:"UK4", soal:8, text:"4.8 Apakah Operator memahami fungsi control switch? Sampling minimal 3"},
 
     //UK5
-    {tipe:"EXCOB", uk:"UK5", soal:1, text:"Apakah Operator memahami tujuan P2H?"},
-    {tipe:"EXCOB", uk:"UK5", soal:2, text:"Apakah Operator memahami 4 langkah P2H?"},
-    {tipe:"EXCOB", uk:"UK5", soal:3, text:"Apakah Operator melakukan pemeriksaan keliling unit?"},
-    {tipe:"EXCOB", uk:"UK5", soal:4, text:"Apakah Operator memahami cara pengecekan komponen saat keliling unit? Sampling minimal 3"},
-    {tipe:"EXCOB", uk:"UK5", soal:5, text:"Apakah Operator melakukan pemeriksaan di dalam kabin?"},
-    {tipe:"EXCOB", uk:"UK5", soal:6, text:"Apakah Operator memahami cara pengecekan komponen di dalam unit? Sampling minimal 3"},
-    {tipe:"EXCOB", uk:"UK5", soal:7, text:"Apakah Operator melakukan pemeriksaan di atas unit setelah engine menyala?"},
-    {tipe:"EXCOB", uk:"UK5", soal:8, text:"Apakah Operator memahami cara pengecekan komponen saat engine menyala? Sampling minimal 3"},
-    {tipe:"EXCOB", uk:"UK5", soal:9, text:"Apakah Operator melakukan pemeriksaan setelah operasi?"},
-    {tipe:"EXCOB", uk:"UK5", soal:10, text:"Apakah Operator memahami cara pengecekan komponen setelah operasi? Sampling minimal 3"},
-    {tipe:"EXCOB", uk:"UK5", soal:11, text:"Apakah Operator memahami kode bahaya untuk temuan P2H?"},
-    {tipe:"EXCOB", uk:"UK5", soal:12, text:"Apakah Operator menuliskan temuan P2H pada kertas P2H jika terdapat temuan?"},
-    {tipe:"EXCOB", uk:"UK5", soal:13, text:"Apakah Operator memahami cara mengisi form P2H?"},
+    {tipe:"EXCOB", uk:"UK5", soal:1, text:"5.1 Apakah Operator memahami tujuan P2H?"},
+    {tipe:"EXCOB", uk:"UK5", soal:2, text:"5.2 Apakah Operator memahami 4 langkah P2H?"},
+    {tipe:"EXCOB", uk:"UK5", soal:3, text:"5.3 Apakah Operator melakukan pemeriksaan keliling unit?"},
+    {tipe:"EXCOB", uk:"UK5", soal:4, text:"5.4 Apakah Operator memahami cara pengecekan komponen saat keliling unit? Sampling minimal 3"},
+    {tipe:"EXCOB", uk:"UK5", soal:5, text:"5.5 Apakah Operator melakukan pemeriksaan di dalam kabin?"},
+    {tipe:"EXCOB", uk:"UK5", soal:6, text:"5.6 Apakah Operator memahami cara pengecekan komponen di dalam unit? Sampling minimal 3"},
+    {tipe:"EXCOB", uk:"UK5", soal:7, text:"5.7 Apakah Operator melakukan pemeriksaan di atas unit setelah engine menyala?"},
+    {tipe:"EXCOB", uk:"UK5", soal:8, text:"5.8 Apakah Operator memahami cara pengecekan komponen saat engine menyala? Sampling minimal 3"},
+    {tipe:"EXCOB", uk:"UK5", soal:9, text:"5.9 Apakah Operator melakukan pemeriksaan setelah operasi?"},
+    {tipe:"EXCOB", uk:"UK5", soal:10, text:"5.10 Apakah Operator memahami cara pengecekan komponen setelah operasi? Sampling minimal 3"},
+    {tipe:"EXCOB", uk:"UK5", soal:11, text:"5.11 Apakah Operator memahami kode bahaya untuk temuan P2H?"},
+    {tipe:"EXCOB", uk:"UK5", soal:12, text:"5.12 Apakah Operator menuliskan temuan P2H pada kertas P2H jika terdapat temuan?"},
+    {tipe:"EXCOB", uk:"UK5", soal:13, text:"5.13 Apakah Operator memahami cara mengisi form P2H?"},
 
     //UK6
-    {tipe:"EXCOB", uk:"UK6", soal:1, text:"Apakah Operator melakukan pekerjaan sesuai dengan plan pekerjaan?"},
-    {tipe:"EXCOB", uk:"UK6", soal:2, text:"Apakah Operator memposisikan track sesuai standar saat pelaksanaan loading?"},
-    {tipe:"EXCOB", uk:"UK6", soal:3, text:"Apakah Operator dapat melakukan digging di bawah plan?"},
-    {tipe:"EXCOB", uk:"UK6", soal:4, text:"Apakah Operator tidak melakukan loading hingga track terangkat?"},
-    {tipe:"EXCOB", uk:"UK6", soal:5, text:"Apakah Operator memaksimalkan Bucket Fill Factor (BFF)?"},
-    {tipe:"EXCOB", uk:"UK6", soal:6, text:"Apakah Operator menggunakan sudut swing optimal?"},
-    {tipe:"EXCOB", uk:"UK6", soal:7, text:"Apakah Operator melakukan teknik peletakan material di vessel sesuai standar?"},
-    {tipe:"EXCOB", uk:"UK6", soal:8, text:"Apakah muatan operator sesuai dengan plan passing?"},
-    {tipe:"EXCOB", uk:"UK6", soal:9, text:"Apakah Operator mempertahankan dudukan excavator agar tetap rata?"},
-    {tipe:"EXCOB", uk:"UK6", soal:10, text:"Apakah Operator dapat menaikkan atau menurunkan unit pada bench secara normal?"},
-    {tipe:"EXCOB", uk:"UK6", soal:11, text:"Apakah Operator tidak melakukan jack swing?"},
-    {tipe:"EXCOB", uk:"UK6", soal:12, text:"Apakah Operator tidak melakukan end stroke?"},
-    {tipe:"EXCOB", uk:"UK6", soal:13, text:"Apakah Operator menggunakan working mode yang sesuai?"},
-    {tipe:"EXCOB", uk:"UK6", soal:14, text:"Apakah Operator dapat melakukan travel unit secara optimal?"},
-    {tipe:"EXCOB", uk:"UK6", soal:15, text:"Apakah Operator melakukan idle sebelum shut down engine?"},
-    {tipe:"EXCOB", uk:"UK6", soal:16, text:"Apakah Operator menempatkan bucket di posisi aman saat parkir atau idle?"},
-    {tipe:"EXCOB", uk:"UK6", soal:17, text:"Apakah Operator parkir dalam posisi rata dan aman?"},
-    {tipe:"EXCOB", uk:"UK6", soal:18, text:"Apakah Operator memahami primary dan secondary work excavator loading?"},
-    {tipe:"EXCOB", uk:"UK6", soal:19, text:"Apakah Operator memahami plan cycle time excavator yang dioperasikannya?"}
+    {tipe:"EXCOB", uk:"UK6", soal:1, text:"6.1 Apakah Operator melakukan pekerjaan sesuai dengan plan pekerjaan?"},
+    {tipe:"EXCOB", uk:"UK6", soal:2, text:"6.2 Apakah Operator memposisikan track sesuai standar saat pelaksanaan loading?"},
+    {tipe:"EXCOB", uk:"UK6", soal:3, text:"6.3 Apakah Operator dapat melakukan digging di bawah plan?"},
+    {tipe:"EXCOB", uk:"UK6", soal:4, text:"6.4 Apakah Operator tidak melakukan loading hingga track terangkat?"},
+    {tipe:"EXCOB", uk:"UK6", soal:5, text:"6.5 Apakah Operator memaksimalkan Bucket Fill Factor (BFF)?"},
+    {tipe:"EXCOB", uk:"UK6", soal:6, text:"6.6 Apakah Operator menggunakan sudut swing optimal?"},
+    {tipe:"EXCOB", uk:"UK6", soal:7, text:"6.7 Apakah Operator melakukan teknik peletakan material di vessel sesuai standar?"},
+    {tipe:"EXCOB", uk:"UK6", soal:8, text:"6.8 Apakah muatan operator sesuai dengan plan passing?"},
+    {tipe:"EXCOB", uk:"UK6", soal:9, text:"6.9 Apakah Operator mempertahankan dudukan excavator agar tetap rata?"},
+    {tipe:"EXCOB", uk:"UK6", soal:10, text:"6.10 Apakah Operator dapat menaikkan atau menurunkan unit pada bench secara normal?"},
+    {tipe:"EXCOB", uk:"UK6", soal:11, text:"6.11 Apakah Operator tidak melakukan jack swing?"},
+    {tipe:"EXCOB", uk:"UK6", soal:12, text:"6.12 Apakah Operator tidak melakukan end stroke?"},
+    {tipe:"EXCOB", uk:"UK6", soal:13, text:"6.13 Apakah Operator menggunakan working mode yang sesuai?"},
+    {tipe:"EXCOB", uk:"UK6", soal:14, text:"6.14 Apakah Operator dapat melakukan travel unit secara optimal?"},
+    {tipe:"EXCOB", uk:"UK6", soal:15, text:"6.15 Apakah Operator melakukan idle sebelum shut down engine?"},
+    {tipe:"EXCOB", uk:"UK6", soal:16, text:"6.16 Apakah Operator menempatkan bucket di posisi aman saat parkir atau idle?"},
+    {tipe:"EXCOB", uk:"UK6", soal:17, text:"6.17 Apakah Operator parkir dalam posisi rata dan aman?"},
+    {tipe:"EXCOB", uk:"UK6", soal:18, text:"6.18 Apakah Operator memahami primary dan secondary work excavator loading?"},
+    {tipe:"EXCOB", uk:"UK6", soal:19, text:"6.19 Apakah Operator memahami plan cycle time excavator yang dioperasikannya?"}
   ],
 
   EXCOAL: [
@@ -1435,9 +1435,24 @@ function loadSoal() {
 
     if (!unit || !bankSoal[unit]) return;
 
+    let ukSebelumnya = "";
+
     bankSoal[unit].forEach(s => {
+
+        // Jika UK berubah, buat pembatas + ID
+        if(s.uk !== ukSebelumnya){
+
+            container.innerHTML += `
+                <div class="uk-section" id="${s.uk}">
+                    <h2 class="judul-uk">${s.uk}</h2>
+                </div>
+            `;
+
+            ukSebelumnya = s.uk;
+        }
+
         const key = `${s.tipe}|${s.uk}|${s.soal}`;
-        const d = jawaban[key] || {}; 
+        const d = jawaban[key] || {};
 
         container.innerHTML += `
             <div class="soal" data-key="${key}">
@@ -1450,8 +1465,10 @@ function loadSoal() {
                 <div class="followup">
                     ${renderFollowUp(key, d)}
                 </div>
-            </div>`;
+            </div>
+        `;
     });
+
     updateProgress();
 }
 
@@ -1843,3 +1860,8 @@ function scrollKeSoalKosong(){
     }
 }
 
+function scrollKeUK(id){
+    document.getElementById(id).scrollIntoView({
+        behavior:"smooth"
+    });
+}
