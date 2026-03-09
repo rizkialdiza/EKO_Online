@@ -308,12 +308,8 @@ option:disabled{
 .btn-ofr-tidak.active { background-color: #dc3545; color: white; }
 
 .progress-wrapper{
-    margin:20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    background: #f4f6f8;
-    padding:10px 0;
+    margin:0;
+    padding:2px 0;
 }
 
 .progress-bar{
@@ -331,10 +327,6 @@ option:disabled{
     transition:width 0.3s;
 }
 
-#progressText{
-    font-weight:700;
-    margin-top:5px;
-}
 
 #progressFill{
     height:100%;
@@ -349,9 +341,9 @@ option:disabled{
 }
 
 #progressText{
-    font-size:14px;
-    margin-top:5px;
-    font-weight: bold;
+    font-size:13px;
+    margin-top:2px;
+    font-weight:bold;
 }
 
 .uk-section{
@@ -373,15 +365,15 @@ option:disabled{
     top:0;
     z-index:999;
     background:#f4f6f8;
-    padding:10px 0;
+    padding:2px 0;
     border-bottom:1px solid #ddd;
 }
 
 .uk-navigation{
     display:flex;
-    gap:8px;
+    gap:6px;
     flex-wrap:wrap;
-    margin-top:8px;
+    margin-top:2px;
 }
 
 .uk-navigation button{
