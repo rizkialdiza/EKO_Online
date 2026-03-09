@@ -318,10 +318,22 @@ option:disabled{
 
 .progress-bar{
     width:100%;
-    height:14px;
-    background:#eee;
-    border-radius:10px;
+    height:10px;
+    background:#ddd;
+    border-radius:6px;
     overflow:hidden;
+}
+
+#progressFill{
+    height:100%;
+    width:0%;
+    background:#4caf50;
+    transition:width 0.3s;
+}
+
+#progressText{
+    font-weight:700;
+    margin-top:5px;
 }
 
 #progressFill{
@@ -340,4 +352,49 @@ option:disabled{
     font-size:14px;
     margin-top:5px;
     font-weight: bold;
+}
+
+.uk-section{
+    margin-top:25px;
+    padding-top:10px;
+    border-top:3px solid #2b7cd3;
+}
+
+.judul-uk{
+    font-size:22px;
+    font-weight:bold;
+    color:#2b7cd3;
+    margin:10px 0 15px 0;
+    text-align:center;
+}
+
+.sticky-evaluasi{
+    position: sticky;
+    top:0;
+    z-index:999;
+    background:#f4f6f8;
+    padding:10px 0;
+    border-bottom:1px solid #ddd;
+}
+
+.uk-navigation{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-top:8px;
+}
+
+.uk-navigation button{
+    padding:6px 12px;
+    border:none;
+    background:#1e88e5;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:600;
+    font-size:13px;
+}
+
+.uk-navigation button:hover{
+    background:#1565c0;
 }
