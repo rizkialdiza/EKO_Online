@@ -111,11 +111,24 @@
 
 <input type="date" id="Tanggal_evaluasi" placeholder="Tanggal Evaluasi">
 
-<div class="progress-wrapper">
-    <div class="progress-bar">
-        <div id="progressFill"></div>
+<div class="sticky-evaluasi">
+
+    <div class="progress-wrapper">
+        <div class="progress-bar">
+            <div id="progressFill"></div>
+        </div>
+        <p id="progressText">0% selesai</p>
     </div>
-    <p id="progressText">0% selesai</p>
+
+    <div class="uk-navigation">
+        <button onclick="scrollKeUK('UK1')">UK1</button>
+        <button onclick="scrollKeUK('UK2')">UK2</button>
+        <button onclick="scrollKeUK('UK3')">UK3</button>
+        <button onclick="scrollKeUK('UK4')">UK4</button>
+        <button onclick="scrollKeUK('UK5')">UK5</button>
+        <button onclick="scrollKeUK('UK6')">UK6</button>
+    </div>
+    
 </div>
 
 <div id="soalContainer"></div>
