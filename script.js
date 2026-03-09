@@ -1444,7 +1444,7 @@ function loadSoal() {
 
             container.innerHTML += `
                 <div class="uk-section" id="${s.uk}">
-                    <h2 class="judul-uk">${s.uk}</h2>
+                     <h2 class="judul-uk">UNIT KOMPETENSI ${s.uk.replace("UK","")}</h2>
                 </div>
             `;
 
