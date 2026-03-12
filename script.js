@@ -1360,7 +1360,7 @@ const bankSoal = {
 };
 
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxIvVSTo3yYVEFm_BxndcHdfOmHScYJLjq7oWbfnWYv8kqmmX0kJvM2Wu3dwm9hPLDt/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyaxtMQWH59WOajMVCr6Lkjm6cDW4wiH4k9pwTffwV8Qa1KIifrztJAlNlJuS0DGO_l/exec';
 let jawaban = {};
 let isSigned = false; 
 let currentToken = ""; 
@@ -1620,6 +1620,7 @@ function simpanDraft(btnDraft) {
         evaluator: document.getElementById("Evaluator").value,
         tanggal: document.getElementById("Tanggal_evaluasi").value,
         EGI: document.getElementById("EGI").value,
+        remarks: document.getElementById("Remarks").value,
         hasil_jawaban: Object.keys(jawaban).map(key => ({
             soal_id: key,
             data: jawaban[key]
@@ -1695,6 +1696,7 @@ function kirimFinal() {
         evaluator: document.getElementById("Evaluator").value,
         tanggal: document.getElementById("Tanggal_evaluasi").value,
         EGI: document.getElementById("EGI").value,
+        remarks: document.getElementById("Remarks").value,
         nilai_akhir: nilaiHasil, // Sekarang nilaiHasil sudah aman karena sudah dihitung di atas
         hasil_jawaban: Object.keys(jawaban).map(key => ({ 
             soal_id: key, 
