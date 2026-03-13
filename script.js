@@ -1360,7 +1360,7 @@ const bankSoal = {
 };
 
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwIYGUjCEquo7qMClD_2tHV16mmiU4SMksiJc6G89jMbabzl6tzEtSRGaudRvk99nQv/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycby4gqrdGYMKabKtbP0LORTLuNxq2c67hBWSCLZZemDj7b0N0YZrpQVU71olsR5ynNHr/exec';
 let jawaban = {};
 let isSigned = false; 
 let currentToken = ""; 
@@ -1867,4 +1867,5 @@ function scrollKeUK(id){
         behavior:"smooth"
     });
 }
+
 
