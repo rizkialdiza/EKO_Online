@@ -1359,8 +1359,7 @@ const bankSoal = {
 
 };
 
-
-const scriptURL = 'https://script.google.com/macros/s/AKfycby4gqrdGYMKabKtbP0LORTLuNxq2c67hBWSCLZZemDj7b0N0YZrpQVU71olsR5ynNHr/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyNoxkoJOsysBuQBFb8YOCLgkUXl_3Y6sTi0KGhjoelPqN950L8oep_kc7V0bCtghr7/exec';
 let jawaban = {};
 let isSigned = false; 
 let currentToken = ""; 
@@ -1374,6 +1373,12 @@ function initSignature() {
 
     canvas.width = canvas.offsetWidth;
     canvas.height = 150;
+
+    // --- TAMBAHKAN BARIS INI: Set background putih agar tidak hitam saat jadi JPEG ---
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    // -------------------------------------------------------------------------------
+
     ctx.strokeStyle = "#000";
     ctx.lineWidth = 3;
     ctx.lineCap = "round";
@@ -1398,10 +1403,26 @@ function initSignature() {
     canvas.addEventListener("touchend", stop);
 }
 
+function gantiUnit() {
+    jawaban = {}; 
+    
+    const progressFill = document.getElementById("progressFill");
+    const progressText = document.getElementById("progressText");
+    if(progressFill) progressFill.style.width = "0%";
+    if(progressText) progressText.innerText = "0 / 0 Soal Sudah Dijawab (0%)";
+
+    // Ubah bagian ini agar sesuai dengan nama fungsi render Anda
+    loadSoal(); 
+}
+
 function clearSignature() {
     const canvas = document.getElementById('signature-pad');
     const ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    // Kembalikan ke putih
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
     isSigned = false;
 }
 
@@ -1610,6 +1631,12 @@ function simpanDraft(btnDraft) {
     const no_unit = document.getElementById("No_Unit").value;
     if (!nrp || !no_unit) return alert("NRP dan No Unit wajib diisi!");
 
+    // PROTEKSI: Jika tombol sudah mati, jangan kirim lagi
+    if (btnDraft.disabled) return;
+
+    // Aktifkan Loading Overlay
+    document.getElementById("loadingLayer").style.display = "flex";
+
     const data = {
         status: "DRAFT",
         token: currentToken,
@@ -1649,6 +1676,10 @@ function simpanDraft(btnDraft) {
 }
 
 function kirimFinal() {
+    
+    const btn = document.getElementById("btnKirimFinal");
+    // PROTEKSI 1: Cek apakah tombol sedang diproses
+    if (btn.disabled) return;
 
     tandaiSoalKosong();
 
@@ -1670,9 +1701,13 @@ function kirimFinal() {
 }
 
     if (!isSigned) return alert("Wajib tanda tangan sebelum kirim!");
+
+    // PROTEKSI 2: Matikan tombol dan tampilkan Loading Overlay
+    btn.innerText = "MENGIRIM...";
+    btn.disabled = true;
+    document.getElementById("loadingLayer").style.display = "flex";
     
-    const btn = document.getElementById("btnKirimFinal");
-    const ttdBase64 = document.getElementById('signature-pad').toDataURL();
+   const ttdBase64 = document.getElementById('signature-pad').toDataURL("image/jpeg", 0.2);
     
     // Ambil token: utamakan dari input, jika kosong pakai variabel global
     const tokenInputVal = document.getElementById("tokenInput") ? document.getElementById("tokenInput").value.toUpperCase() : "";
@@ -1867,5 +1902,4 @@ function scrollKeUK(id){
         behavior:"smooth"
     });
 }
-
 
