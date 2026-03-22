@@ -16,7 +16,7 @@ body{
 
 h2{
   text-align:center;
-  margin-bottom:15px;
+  margin-bottom:10px;
   font-size:20px;
 }
 
@@ -173,17 +173,40 @@ option:disabled{
 }
 
 .modal-overlay {
-    display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-    backdrop-filter: blur(5px);
-    /* --- Tambahkan ini --- */
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center; /* Menjaga box di tengah layar */
+    z-index: 10000;
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 2% auto; /* Jarak 2% dari atas supaya tidak terlalu mepet */
+    padding: 20px;
+    border-radius: 12px;
+    width: 95%;
+    max-width: 500px;
+    
+    /* INI KUNCINYA */
+    max-height: 90vh; /* Kotak tidak akan lebih dari 90% tinggi layar */
+    overflow-y: auto; /* Munculkan scroll jika konten lebih panjang dari layar */
+    
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     animation: fadeIn 0.3s ease-out;
+}
+
+/* Opsional: Mempercantik Scrollbar di Chrome/Safari */
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
 }
 
 @keyframes fadeIn {
@@ -191,25 +214,54 @@ option:disabled{
     to { opacity: 1; }
 }
 
-
-
 .summary-box {
-    position: fixed;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    background: white; /* INI KUNCI AGAR KOTAK TETAP PUTIH */
-    padding: 25px;
+    background: white;
     border-radius: 15px;
-    width: 90%;
-    max-width: 400px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    z-index: 1001;
+    width: 100%;
+    max-width: 450px;
+    max-height: 85vh; /* Batasi tinggi maksimal agar tidak keluar layar */
+    display: flex;
+    flex-direction: column; /* KUNCINYA: header, konten, footer berderet vertikal */
+    overflow: hidden; /* Mencegah box utama ikut scroll */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.summary-box > * {
+    flex-shrink: 0;
+}
+
+/* AREA INI YANG BISA DI-SCROLL */
+.summary-content-scroll {
+    flex: 1; /* Mengambil sisa ruang yang tersedia */
+    overflow-y: auto; /* Aktifkan scroll hanya di sini */
+    padding: 0 20px 20px; /* Padding samping agar teks tidak nempel ke tepi */
+    -webkit-overflow-scrolling: touch; /* Scroll halus di iOS */
+}
+
+/* Mempercantik tampilan scrollbar */
+.summary-content-scroll::-webkit-scrollbar {
+    width: 5px;
+}
+.summary-content-scroll::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 10px;
+}
+
+.btn-group-modal {
+    display: flex;
+    gap: 10px;
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    background: #fff;
 }
 
 #signature-pad {
-    display: block;
-    width: 100%;
-    height: 150px;
+    width: 100%;           /* Mengikuti lebar container */
+    height: 200px;         /* Beri tinggi yang pasti, misal 200px */
+    border: 1px solid #ccc;
+    background-color: #fff;
+    touch-action: none;    /* Mencegah layar goyang saat tanda tangan di HP */
+    cursor: crosshair;     /* Mengubah kursor jadi tanda plus agar presisi */
 }
 
 @keyframes slideUp {
@@ -218,21 +270,16 @@ option:disabled{
 }
 
 .summary-box h3 {
-    margin-top: 0;
-    color: #333;
+    padding: 20px 20px 10px;
+    margin: 0;
 }
 
 .summary-item {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
-    border-bottom: 1px solid #eee;
-}
-
-.btn-group-modal {
-    margin-top: 20px;
-    display: flex;
-    gap: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
 }
 
 .btn-modal-kirim {
@@ -240,10 +287,10 @@ option:disabled{
     background: #28a745;
     color: white;
     border: none;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
+    padding: 14px;
+    border-radius: 10px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .btn-modal-kembali {
@@ -251,8 +298,8 @@ option:disabled{
     background: #dc3545;
     color: white;
     border: none;
-    padding: 12px;
-    border-radius: 8px;
+    padding: 14px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -389,4 +436,28 @@ option:disabled{
 
 .uk-navigation button:hover{
     background:#1565c0;
+}
+
+#fotoEvaluasi {
+    width: 100%;
+    padding: 10px;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.signature-wrapper {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    background: #fff;
+    margin: 5px 0;
+    padding: 10px; /* Ruang tambahan untuk memulai scroll */
+    touch-action: none; /* Canvas tetap butuh ini untuk menggambar */
+}
+
+body.modal-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
 }
