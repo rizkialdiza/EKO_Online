@@ -41,20 +41,20 @@
   <option value="DTM">Medium Hauler</option>
 
   <option disabled>── EXCAVATOR ──</option>
-  <option value="EXCOB">Excavator OB</option>
-  <option value="EXCOAL">Excavator COAL</option>
-  <option value="EXCSUP">Excavator Support</option>
+  <option value="EXCOB">EXCAVATOR OB</option>
+  <option value="EXCOAL">EXCAVATOR COAL</option>
+  <option value="EXCSUP">EXCAVATOR SUPPORT</option>
 
   <option disabled>── DOZER ──</option>
-  <option value="DZS">Dozer Small</option>
-  <option value="DZM">Dozer Medium</option>
+  <option value="DZS">DOZER SMALL</option>
+  <option value="DZM">DOZER MEDIUM</option>
 
   <option disabled>── UNIT SUPPORT ──</option>
-  <option value="WT">Water Truck</option>
-  <option value="LTFT">Lube Truck / Fuel Truck</option>
-  <option value="CT">Crane Truck</option>
-  <option value="Grader">Motor Grader</option>
-  <option value="Compact">Compact</option>
+  <option value="WT">WATER TRUCK</option>
+  <option value="LTFT">LUBE TRUCK / FUEL TRUCK</option>
+  <option value="CT">CRANE TRUCK</option>
+  <option value="Grader">MOTOR GRADER</option>
+  <option value="Compact">COMPACT</option>
 
 </select>
 
@@ -94,7 +94,6 @@
   <option value="">Pilih Evaluator</option>
   <option disabled>── Instruktur Track ──</option>
   <option>KUSNADI</option>
-  <option>ABDUL WAHAB</option>
   <option>PADRI</option>
   <option>AGUNG IRAWAN</option>
   <option>SETO HARIYONO</option>
@@ -135,41 +134,50 @@
 <div id="soalContainer"></div>
 
 <div id="modalOverlay" class="modal-overlay">
-    <div id="summaryBox" class="summary-box" style="display: none;">
-        <h3 style="text-align: center;" >RINGKASAN EVALUASI</h3>
-        <hr>
-
-        <div class="summary-item" style="font-weight: 1000;"><span>Total Soal:</span> <b id="sumTotal">0</b></div>
-        <div class="summary-item"><span>Jawaban YA:</span> <b id="sumYa" style="color: green;">0</b></div>
-        <div class="summary-item"><span>Jawaban TIDAK:</span> <b id="sumTidak" style="color: red;">0</b></div>
-        <div class="summary-item"><span>TIDAK DIUJI:</span> <b id="sumTdkUji" style="color: orange;">0</b></div>
-        <div class="summary-item"><span>BELUM DIISI:</span> <b id="sumBelum" style="color: gray;">0</b></div>
+    <div id="summaryBox" class="summary-box">
         
-        <div class="summary-item" style="background: #f8f9fa; border-radius: 8px; margin-top: 10px; padding: 15px; border: 1px solid #ddd;">
-            <span><b>NILAI AKHIR:</b></span> 
-            <b id="sumNilai" style="font-size: 20px; color: #007bff;">0</b>
-        </div>
+        <h3 style="text-align: center; margin-bottom: 0; padding-bottom: 0;">RINGKASAN EVALUASI</h3>
+    <p id="sumNamaOperator" style="text-align: center; margin-top: 0; font-weight: bold; color: #555; font-size: 14px;"></p>
 
-        <!--Catatan kondisi unit -->
-        <p style="text-align: left; font-size: 14px; font-weight: bold; margin-top: 15px; margin-bottom: 5px;">Catatan Kondisi Unit / Environment:</p>
-        <div style="border: 2px dashed #ccc; border-radius: 8px; background: #fff; overflow: hidden;">
-            <textarea id="Remarks" placeholder="Tidak Wajib diisi"
-            style="width: 100%; height: 70px; border: none; resize: none; padding: 8px;"></textarea>
-        </div>
+        <div class="summary-content-scroll">
+            
+            <div class="summary-item" style="font-weight: 1000;"><span>Total Soal:</span> <b id="sumTotal">0</b></div>
+            <div class="summary-item"><span>Jawaban YA:</span> <b id="sumYa" style="color: green;">0</b></div>
+            <div class="summary-item"><span>Jawaban TIDAK:</span> <b id="sumTidak" style="color: red;">0</b></div>
+            <div class="summary-item"><span>TIDAK DIUJI:</span> <b id="sumTdkUji" style="color: orange;">0</b></div>
+            <div class="summary-item"><span>BELUM DIISI:</span> <b id="sumBelum" style="color: gray;">0</b></div>
+            
+            <div class="summary-item" style="background: #f8f9fa; border-radius: 8px; margin-top: 10px; padding: 15px; border: 1px solid #ddd;">
+                <span><b>NILAI AKHIR:</b></span> 
+                <b id="sumNilai" style="font-size: 20px; color: #007bff;">0</b>
+            </div>
 
-        <!--Siganture box -->
-        <p style="text-align: left; font-size: 14px; font-weight: bold; margin-top: 15px; margin-bottom: 5px;">Tanda Tangan Operator:</p>
-        <div style="border: 2px dashed #ccc; border-radius: 8px; background: #fff; overflow: hidden;">
-            <canvas id="signature-pad" style="width: 100%; height: 150px; touch-action: none; cursor: crosshair;"></canvas>
-        </div>
-        <div style="text-align: right;">
-            <button type="button" onclick="clearSignature()" style="background:none; border:none; color:red; font-size: 12px; cursor: pointer; padding: 5px;">✖ Hapus Tanda Tangan</button>
-        </div>
+            <p style="text-align: left; font-size: 14px; font-weight: bold; margin-top: 15px; margin-bottom: 5px;">Catatan Kondisi Unit / Environment:</p>
+            <div style="border: 2px dashed #ccc; border-radius: 8px; background: #fff; overflow: hidden;">
+                <textarea id="Remarks" placeholder="Tidak Wajib diisi"
+                style="width: 100%; height: 70px; border: none; resize: none; padding: 8px; font-family: sans-serif;"></textarea>
+            </div>
 
+            <p style="text-align: left; font-size: 14px; font-weight: bold; margin-top: 15px; margin-bottom: 5px;">Tanda Tangan Operator:</p>
+            <div class="signature-wrapper">
+                <canvas id="signature-pad"></canvas>
+            </div>
+            <div style="text-align: right;">
+                <button type="button" onclick="clearSignature()" style="background:none; border:none; color:red; font-size: 12px; cursor: pointer; padding: 5px;">✖ Hapus Tanda Tangan</button>
+            </div>
+            
+            <p style="text-align: left; font-size: 14px; font-weight: bold; margin-top: 15px; margin-bottom: 5px;">Foto Bukti Evaluasi:</p>
+            <input type="file" id="fotoEvaluasi" accept="image/*" style="width:100%; padding: 10px; font-size: 13px;">
+            <div id="previewContainer" style="margin-top: 10px; display: none; text-align: center;">
+                <img id="imgPreview" src="" style="max-width: 100%; border-radius: 8px; border: 1px solid #ccc;">
+            </div>
+
+        </div> <hr>
         <div class="btn-group-modal">
             <button class="btn-modal-kembali" onclick="closeSummary()">KEMBALI</button>
             <button id="btnKirimFinal" class="btn-modal-kirim" onclick="kirimFinal()">KIRIM DATA</button>
         </div>
+
     </div>
 </div>
 
@@ -183,7 +191,7 @@
     </button>
 </div>
 
-<div id="loadingLayer" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(255,255,255,0.7); z-index:9999; justify-content:center; align-items:center; flex-direction:column;">
+<div id="loadingLayer" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(255,255,255,0.7); z-index:20000; justify-content:center; align-items:center; flex-direction:column;">
     <i class="fa fa-spinner fa-spin" style="font-size: 50px; color: #2f00ff;"></i>
     <p style="margin-top: 15px; font-weight: bold; color: #2f00ff;">Sedang Mengirim Data, Mohon Tunggu...</p>
 </div>
