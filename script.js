@@ -1354,50 +1354,80 @@ const bankSoal = {
     {tipe:"COMPACT", uk:"UK6", soal:8, text:"6.8 Apakah Operator melakukan idle sebelum shut down engine?"},
     {tipe:"COMPACT", uk:"UK6", soal:9, text:"6.9 Apakah Operator paham dan TIDAK melakukan vibration mundur?"},
     {tipe:"COMPACT", uk:"UK6", soal:10, text:"6.10 Apakah Operator paham dan TIDAK melakukan travel di jalan miring?"}
-
     ]
 
 };
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyNoxkoJOsysBuQBFb8YOCLgkUXl_3Y6sTi0KGhjoelPqN950L8oep_kc7V0bCtghr7/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxs0S1ApaeecGah9OwkBpM_l8G4ion0nDZvgCvLNDvf9Vq1M1xHESz7S31ilZDbzrL_/exec';
 let jawaban = {};
 let isSigned = false; 
 let currentToken = ""; 
 
-// 1. FUNGSI TANDA TANGAN
 function initSignature() {
     const canvas = document.getElementById('signature-pad');
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     let drawing = false;
 
-    canvas.width = canvas.offsetWidth;
-    canvas.height = 150;
+    // KUNCI UTAMA: Menyamakan resolusi internal dengan ukuran tampilan CSS
+    function resizeCanvas() {
+        const ratio = Math.max(window.devicePixelRatio || 1, 1);
+        canvas.width = canvas.offsetWidth * ratio;
+        canvas.height = canvas.offsetHeight * ratio;
+        ctx.scale(ratio, ratio);
+        
+        // Isi background putih kembali setelah resize
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        // Reset gaya garis karena terhapus saat resize
+        ctx.strokeStyle = "#000";
+        ctx.lineWidth = 2;
+        ctx.lineCap = "round";
+    }
 
-    // --- TAMBAHKAN BARIS INI: Set background putih agar tidak hitam saat jadi JPEG ---
-    ctx.fillStyle = "#ffffff";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    // -------------------------------------------------------------------------------
-
-    ctx.strokeStyle = "#000";
-    ctx.lineWidth = 3;
-    ctx.lineCap = "round";
+    // Jalankan resize saat inisialisasi
+    resizeCanvas();
 
     function getPos(e) {
         const rect = canvas.getBoundingClientRect();
+        // Menggunakan clientX/Y agar akurat di semua perangkat
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+        
         return {
-            x: (e.clientX || (e.touches && e.touches[0].clientX)) - rect.left,
-            y: (e.clientY || (e.touches && e.touches[0].clientY)) - rect.top
+            x: clientX - rect.left,
+            y: clientY - rect.top
         };
     }
 
-    function start(e) { drawing = true; isSigned = true; const pos = getPos(e); ctx.beginPath(); ctx.moveTo(pos.x, pos.y); }
-    function move(e) { if (!drawing) return; const pos = getPos(e); ctx.lineTo(pos.x, pos.y); ctx.stroke(); e.preventDefault(); }
-    function stop() { drawing = false; }
+    function start(e) {
+        drawing = true;
+        isSigned = true;
+        const pos = getPos(e);
+        ctx.beginPath();
+        ctx.moveTo(pos.x, pos.y);
+        // Mencegah scroll layar saat mulai tanda tangan di HP
+        if (e.touches) e.preventDefault(); 
+    }
 
+    function move(e) {
+        if (!drawing) return;
+        const pos = getPos(e);
+        ctx.lineTo(pos.x, pos.y);
+        ctx.stroke();
+        e.preventDefault();
+    }
+
+    function stop() {
+        drawing = false;
+    }
+
+    // Event Listeners
     canvas.addEventListener("mousedown", start);
     canvas.addEventListener("mousemove", move);
     window.addEventListener("mouseup", stop);
+    
     canvas.addEventListener("touchstart", start, {passive: false});
     canvas.addEventListener("touchmove", move, {passive: false});
     canvas.addEventListener("touchend", stop);
@@ -1417,13 +1447,20 @@ function gantiUnit() {
 
 function clearSignature() {
     const canvas = document.getElementById('signature-pad');
+    if (!canvas) return;
     const ctx = canvas.getContext('2d');
-    
-    // Kembalikan ke putih
+
+    // 1. Bersihkan seluruh area canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // 2. Isi kembali dengan warna putih (agar saat di-upload tidak transparan/hitam)
     ctx.fillStyle = "#ffffff";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    
+
+    // 3. Reset variabel status tanda tangan
     isSigned = false;
+    
+    console.log("Canvas dibersihkan");
 }
 
 function cariNama() {
@@ -1675,101 +1712,108 @@ function simpanDraft(btnDraft) {
     });
 }
 
-function kirimFinal() {
-    
+async function kirimFinal() {
     const btn = document.getElementById("btnKirimFinal");
-    // PROTEKSI 1: Cek apakah tombol sedang diproses
+    const loading = document.getElementById("loadingLayer");
+    
+    // 1. TAMPILKAN LOADING SEGERA (Urutan pertama agar user tahu proses dimulai)
+    if (loading) loading.style.display = "flex";
+
+    // Proteksi agar tidak klik dua kali
     if (btn.disabled) return;
-
-    tandaiSoalKosong();
-
-    //Validasi awal
-    const unitTerpilih = document.getElementById("unit").value;
-    const totalSoal = bankSoal[unitTerpilih] ? bankSoal[unitTerpilih].length : 0;
-    const jumlahJawaban = Object.keys(jawaban).length;
-
-    if (jumlahJawaban < totalSoal) {
-
-    const sisa = totalSoal - jumlahJawaban;
-    alert("Masih ada " + sisa + " soal yang belum dijawab!");
-    closeSummary(); // tutup modal
-    setTimeout(() => {
-        scrollKeSoalKosong();
-    }, 200);
-
-    return;
-}
-
-    if (!isSigned) return alert("Wajib tanda tangan sebelum kirim!");
-
-    // PROTEKSI 2: Matikan tombol dan tampilkan Loading Overlay
-    btn.innerText = "MENGIRIM...";
     btn.disabled = true;
-    document.getElementById("loadingLayer").style.display = "flex";
-    
-   const ttdBase64 = document.getElementById('signature-pad').toDataURL("image/jpeg", 0.2);
-    
-    // Ambil token: utamakan dari input, jika kosong pakai variabel global
-    const tokenInputVal = document.getElementById("tokenInput") ? document.getElementById("tokenInput").value.toUpperCase() : "";
-    const tokenYangDigunakan = tokenInputVal || currentToken;
-
-    // 2. HITUNG NILAI HASIL TERLEBIH DAHULU (PENTING!)
-    // Pastikan variabel ini dihitung DI ATAS sebelum membuat objek 'data'
-    let ya = Object.values(jawaban).filter(j => j.nilai === 1).length;
-    let tidak = Object.values(jawaban).filter(j => j.nilai === 0).length;
-    let nilaiHasil = (ya + tidak) > 0 ? Math.round((ya / (ya + tidak)) * 100) : 0;
-
-    // 3. BARU BUAT OBJEK DATA
-    const data = {
-        status: "FINAL",
-        token: tokenYangDigunakan,
-        tanda_tangan: ttdBase64,
-        nama: document.getElementById("nama").value,
-        nrp: document.getElementById("nrp").value,
-        unit: document.getElementById("unit").value,
-        no_unit: document.getElementById("No_Unit").value,
-        evaluator: document.getElementById("Evaluator").value,
-        tanggal: document.getElementById("Tanggal_evaluasi").value,
-        EGI: document.getElementById("EGI").value,
-        remarks: document.getElementById("Remarks").value,
-        nilai_akhir: nilaiHasil, // Sekarang nilaiHasil sudah aman karena sudah dihitung di atas
-        hasil_jawaban: Object.keys(jawaban).map(key => ({ 
-            soal_id: key, 
-            data: jawaban[key] 
-        }))
-    };
-
-    // 4. Proses Pengiriman
     btn.innerText = "MENGIRIM...";
-    btn.disabled = true;
 
-fetch(scriptURL, {
-        method: "POST",
-        body: JSON.stringify(data)
-    })
-    .then(res => res.json())
-    .then(res => {
-        if(res.status === "success"){
-            // Pesan sukses tanpa menampilkan token
-            alert("Evaluasi Selesai! Data telah berhasil dikirim ke database.");
-            location.reload(); // Form reset, token otomatis "hilang" dari memory
-        } else {
-            alert("Gagal: " + res.message);
-            btn.innerText = "SUBMIT FINAL";
-            btn.disabled = false;
+    try {
+        // --- A. Validasi & Kompres Foto ---
+        const fotoInput = document.getElementById("fotoEvaluasi");
+        if (!fotoInput || fotoInput.files.length === 0) {
+            throw new Error("Harap lampirkan foto bukti evaluasi!");
         }
-    })
+        
+        const fileFoto = fotoInput.files[0];
+        // Proses kompresi (AWAIT dipastikan jalan di sini)
+        const fotoBase64 = await compressImage(fileFoto, 800);
 
-    .catch(err => {
-        console.error("Error submit:", err);
-        alert("Gagal mengirim data. Cek koneksi internet atau script URL.");
-        btn.innerText = "SUBMIT FINAL";
+        // --- B. Validasi Kelengkapan Soal ---
+        const unitTerpilih = document.getElementById("unit").value;
+        const totalSoal = bankSoal[unitTerpilih] ? bankSoal[unitTerpilih].length : 0;
+        const jumlahJawaban = Object.keys(jawaban).length;
+
+        if (jumlahJawaban < totalSoal) {
+            tandaiSoalKosong();
+            closeSummary(); // Tutup modal agar user bisa lihat soal yang merah
+            setTimeout(() => { scrollKeSoalKosong(); }, 300);
+            throw new Error("Masih ada " + (totalSoal - jumlahJawaban) + " soal yang belum dijawab!");
+        }
+
+        if (!isSigned) {
+            throw new Error("Wajib tanda tangan sebelum kirim!");
+        }
+
+        // --- C. Persiapan Payload Data ---
+        const ttdBase64 = document.getElementById('signature-pad').toDataURL("image/jpeg", 0.2);
+        const tokenInputVal = document.getElementById("tokenInput") ? document.getElementById("tokenInput").value.toUpperCase() : "";
+        const tokenYangDigunakan = tokenInputVal || currentToken;
+
+        // Hitung nilai akhir
+        let ya = Object.values(jawaban).filter(j => j.nilai === 1).length;
+        let tidak = Object.values(jawaban).filter(j => j.nilai === 0).length;
+        let tdkUji = Object.values(jawaban).filter(j => j.nilai === -1).length;
+        
+        const pembagi = totalSoal - tdkUji;
+        let nilaiHasil = (pembagi > 0) ? Math.round((ya / pembagi) * 100) : 0;
+
+        const payload = {
+            status: "FINAL",
+            token: tokenYangDigunakan,
+            tanda_tangan: ttdBase64,
+            nama: document.getElementById("nama").value,
+            nrp: document.getElementById("nrp").value,
+            unit: document.getElementById("unit").value,
+            no_unit: document.getElementById("No_Unit").value,
+            evaluator: document.getElementById("Evaluator").value,
+            tanggal: document.getElementById("Tanggal_evaluasi").value,
+            EGI: document.getElementById("EGI").value,
+            foto_bukti: fotoBase64,
+            remarks: document.getElementById("Remarks").value,
+            nilai_akhir: nilaiHasil,
+            hasil_jawaban: Object.keys(jawaban).map(key => ({ 
+                soal_id: key, 
+                data: jawaban[key] 
+            }))
+        };
+
+        // --- D. Eksekusi Pengiriman ke App Script ---
+        const response = await fetch(scriptURL, {
+            method: "POST",
+            body: JSON.stringify(payload)
+        });
+        
+        const res = await response.json();
+
+        if (res.status === "success") {
+            alert("Evaluasi Selesai! Data telah berhasil dikirim ke database.");
+            location.reload(); // Refresh halaman setelah sukses
+        } else {
+            throw new Error(res.message || "Terjadi kesalahan pada server.");
+        }
+
+    } catch (err) {
+        // Jika ada error (validasi atau koneksi), sembunyikan loading agar user bisa edit
+        alert(err.message);
+        console.error("Submission error:", err);
+        
+        if (loading) loading.style.display = "none";
         btn.disabled = false;
-    });
+        btn.innerText = "SUBMIT FINAL";
+    }
 }
+
+// --- PERBAIKAN FUNGSI MODAL SUMMARY ---
 
 function submitForm() {
-
+    // 1. Validasi Identitas (Sama seperti kodemu)
     const nama = document.getElementById("nama").value.trim();
     const nrp = document.getElementById("nrp").value.trim();
     const unit = document.getElementById("unit").value;
@@ -1777,42 +1821,47 @@ function submitForm() {
     const noUnit = document.getElementById("No_Unit").value.trim();
     const evaluator = document.getElementById("Evaluator").value;
 
-    if (!nrp) return alert("NRP wajib diisi!");
-    if (!nama) return alert("Nama belum muncul / tidak ditemukan!");
-    if (!unit) return alert("Unit wajib dipilih!");
-    if (!egi) return alert("EGI wajib dipilih!");
-    if (!noUnit) return alert("Nomor Unit wajib diisi!");
-    if (!evaluator) return alert("Evaluator wajib dipilih!");
+    if (!nrp || !nama || !unit || !egi || !noUnit || !evaluator) {
+        return alert("Mohon lengkapi semua data identitas di atas!");
+    }
 
-    // Minimal ada 1 jawaban
+    // 2. Validasi Minimal Jawaban
     if (Object.keys(jawaban).length === 0) {
         return alert("Minimal harus ada 1 soal yang dijawab!");
     }
 
-    // Validasi follow-up
+    // 3. Validasi Follow-up (Sama seperti kodemu)
     for (let key in jawaban) {
         const j = jawaban[key];
-
         if (j.nilai === 0 && j.ofr === undefined) {
-            return alert("Jika memilih TIDAK, OFR wajib dipilih!");
+            return alert("Ada jawaban TIDAK yang belum memilih status OFR!");
         }
-
         if (j.nilai === -1 && (!j.alasan || j.alasan.trim() === "")) {
-            return alert("Jika memilih TIDAK DIUJI, alasan wajib diisi!");
+            return alert("Ada jawaban TIDAK DIUJI yang belum diisi alasannya!");
         }
     }
 
+    // Jika lolos semua, baru panggil fungsi tampilkan modal
     tampilkanSummary();
 }
 
-// 6. MODAL SUMMARY
 function tampilkanSummary() {
     try {
+        // --- AMBIL NAMA DARI INPUT UTAMA ---
+        const namaInput = document.getElementById("nama").value;
+        const namaOperator = namaInput ? namaInput.trim() : "NAMA TIDAK DITEMUKAN";
+
         let ya = 0, tidak = 0, tdkUji = 0;
         const unitTerpilih = document.getElementById("unit").value;
         const listSoal = (typeof bankSoal !== 'undefined') ? (bankSoal[unitTerpilih] || []) : [];
+
+        // --- TAMPILKAN NAMA KE MODAL ---
+        const elementNama = document.getElementById("sumNamaOperator");
+        if (elementNama) {
+            elementNama.innerText = "Operator a.n. " + namaOperator.toUpperCase();
+        }
         
-        // Hitung jawaban dari variabel global 'jawaban'
+        // Hitung jawaban
         Object.values(jawaban).forEach(j => {
             if (j.nilai === 1) ya++;
             else if (j.nilai === 0) tidak++;
@@ -1821,9 +1870,12 @@ function tampilkanSummary() {
 
         const totalSoal = listSoal.length;
         const belumDijawab = totalSoal - (ya + tidak + tdkUji);
-        const nilaiAkhir = (ya + tidak > 0) ? Math.round((ya / (totalSoal-tdkUji)) * 100) : 0;
+        
+        // Rumus Nilai: (Ya / (Total - Tidak Diuji)) * 100
+        const pembagi = totalSoal - tdkUji;
+        const nilaiAkhir = (pembagi > 0) ? Math.round((ya / pembagi) * 100) : 0;
 
-        // Isi ke elemen Modal
+        // Update teks ke dalam Modal
         document.getElementById("sumTotal").innerText = totalSoal;
         document.getElementById("sumYa").innerText = ya;
         document.getElementById("sumTidak").innerText = tidak;
@@ -1831,12 +1883,19 @@ function tampilkanSummary() {
         document.getElementById("sumBelum").innerText = belumDijawab;
         document.getElementById("sumNilai").innerText = nilaiAkhir + " / 100";
 
-        // Munculkan Modal
-        document.getElementById("modalOverlay").style.display = "block";
-        document.getElementById("summaryBox").style.display = "block";
+        // Beri warna pada nilai (Merah jika < 100, Biru jika 100)
+        const sumNilaiElem = document.getElementById("sumNilai");
+        sumNilaiElem.style.color = (nilaiAkhir < 100) ? "red" : "#007bff";
 
-        // Inisialisasi Tanda Tangan
-        setTimeout(initSignature, 300);
+        // Tampilkan Modal
+        const modal = document.getElementById("modalOverlay");
+        modal.style.display = "flex"; 
+        document.body.classList.add('modal-open');
+
+        // Reset & Inisialisasi Tanda Tangan
+        setTimeout(() => {
+            initSignature();
+        }, 300);
 
     } catch (e) {
         console.error(e);
@@ -1846,12 +1905,39 @@ function tampilkanSummary() {
 
 function closeSummary() {
     document.getElementById("modalOverlay").style.display = "none";
-    document.getElementById("summaryBox").style.display = "none";
+    document.body.classList.remove('modal-open');
 }
 
+// Tambahkan event listener agar saat window load tidak langsung muncul
+// --- GABUNGKAN SEMUA WINDOW.ONLOAD MENJADI SATU ---
 window.onload = function() {
-    initSignature();
+    // 1. Pastikan Modal Tersembunyi Saat Awal
+    const modal = document.getElementById("modalOverlay");
+    if(modal) {
+        modal.style.display = "none";
+    }
+    
+    // 2. Lepaskan lock scroll body (jika ada sisa session sebelumnya)
+    document.body.classList.remove('modal-open');
+
+    // 3. Inisialisasi Tanda Tangan (hanya jika elemennya ada)
+    const canvas = document.getElementById('signature-pad');
+    if (canvas) {
+        initSignature();
+    }
 };
+
+// --- OPTIMASI FUNGSI CLOSE ---
+function closeSummary() {
+    const modal = document.getElementById("modalOverlay");
+    if (modal) {
+        modal.style.display = "none";
+    }
+    document.body.classList.remove('modal-open');
+    
+    // Opsional: scroll kembali ke atas modal jika user ingin cek jawaban lagi
+    window.scrollTo(0, 0); 
+}
 
 function updateProgress(){
 
@@ -1900,6 +1986,39 @@ function scrollKeSoalKosong(){
 function scrollKeUK(id){
     document.getElementById(id).scrollIntoView({
         behavior:"smooth"
+    });
+}
+
+function getBase64(file) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = error => reject(error);
+    });
+}
+
+// Fungsi untuk mengecilkan ukuran gambar sebelum dikirim
+function compressImage(file, maxWidth = 800) {
+    return new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = (event) => {
+            const img = new Image();
+            img.src = event.target.result;
+            img.onload = () => {
+                const canvas = document.createElement('canvas');
+                const scale = maxWidth / img.width;
+                canvas.width = maxWidth;
+                canvas.height = img.height * scale;
+                
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                
+                // Kualitas 0.7 (70%) sangat cukup untuk bukti foto dan sangat ringan
+                resolve(canvas.toDataURL("image/jpeg", 0.5));
+            };
+        };
     });
 }
 
