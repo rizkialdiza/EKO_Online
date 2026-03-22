@@ -1358,7 +1358,7 @@ const bankSoal = {
 
 };
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxs0S1ApaeecGah9OwkBpM_l8G4ion0nDZvgCvLNDvf9Vq1M1xHESz7S31ilZDbzrL_/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbx999IGU_z7RWheXWa4l7Xj9tlC0Mc4Fkg23uZ7qv8J_KiDQgNc8Cbf0n-yRKSqNNQu/exec';
 let jawaban = {};
 let isSigned = false; 
 let currentToken = ""; 
