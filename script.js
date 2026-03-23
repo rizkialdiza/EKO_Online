@@ -1358,7 +1358,7 @@ const bankSoal = {
 
 };
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbx999IGU_z7RWheXWa4l7Xj9tlC0Mc4Fkg23uZ7qv8J_KiDQgNc8Cbf0n-yRKSqNNQu/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwrxU8x7pW-zTB8MGmvZ095gBIw8M-9TSPajK17fbOKW9CLrHsAE_rtmyKN2VCwFfBe/exec';
 let jawaban = {};
 let isSigned = false; 
 let currentToken = ""; 
@@ -1733,7 +1733,7 @@ async function kirimFinal() {
         
         const fileFoto = fotoInput.files[0];
         // Proses kompresi (AWAIT dipastikan jalan di sini)
-        const fotoBase64 = await compressImage(fileFoto, 800);
+        const fotoBase64 = await compressImage(fileFoto, 400);
 
         // --- B. Validasi Kelengkapan Soal ---
         const unitTerpilih = document.getElementById("unit").value;
